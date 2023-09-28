@@ -42,8 +42,9 @@ footer ul li{
     padding: 7% 15%;
 }
 #title .container-fluid{
-    text-align: left;
-    padding: 10% 3%;
+    /*text-align: left;*/
+    margin-top: 5%;
+    padding: 5% 3%;
 }
 .copyright{
     margin: 20px 0;
