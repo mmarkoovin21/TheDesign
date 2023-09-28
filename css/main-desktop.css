@@ -42,8 +42,7 @@ footer ul li{
     padding: 7% 15%;
 }
 #title .container-fluid{
-    /*text-align: left;*/
-    margin-top: 5%;
+    margin-top: 3.7rem;
     padding: 5% 3%;
 }
 .copyright{
@@ -98,7 +97,6 @@ footer ul li{
 }
 .postupak{
     text-align: center;
-    margin-bottom:5%;
     background-color: #E4DCCF;
     width: 60%;
     border-radius: 0.5rem;
@@ -107,7 +105,7 @@ footer ul li{
 .prica-pocetak{
     text-align: center;
     margin-bottom:7%;
-    background-color: #E4DCCF;
+    background-color: rgba(87,110,114,0.9);
     width: 60%;
     border-radius: 0.5rem;
     box-shadow: 0 0 15px rgba(0,0,0,0.4);
@@ -119,10 +117,8 @@ footer ul li{
     margin-bottom: 2.3rem;
 }
 /**************************ID-S***********************************/
-#drugi{
-    animation-delay: 2s;
-}
 #drugi.prica-pocetak{
+    margin-bottom: 0;
     margin-left: 40%;
 }
 #gallery-modal .modal-img{
@@ -147,6 +143,7 @@ footer ul li{
     text-align: left;
 }
 #prvi{
+    margin-bottom:5%;
     animation-delay: 1s;
 }
 #pricing{
