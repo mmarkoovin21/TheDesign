@@ -103,7 +103,7 @@ footer ul li{
     box-shadow: 0 0 15px rgba(0,0,0,0.4);
 }
 .prica-pocetak{
-    text-align: center;
+    text-align: left;
     margin-bottom:7%;
     background-color: rgba(87,110,114,0.9);
     width: 60%;
@@ -141,6 +141,8 @@ footer ul li{
 }
 #podaci{
     text-align: left;
+    width: 60%;
+    margin: 0 auto;
 }
 #prvi{
     margin-bottom:5%;
@@ -154,10 +156,14 @@ footer ul li{
 }
 #title{
     background-image: url("../dokumentacija/pic/pexels-karl-solano-2883049.jpg");
-    background-size: 110%;
+    background-size: cover;
+    background-attachment: fixed;
 }
 #Obnova-namjestaja .prica{
     color: white;
+}
+#upute-forma{
+    width: 70%;
 }
 /**************************FORMS**********************************/
 #form .container-fluid{
