@@ -104,6 +104,7 @@ footer ul li{
 }
 .prica-pocetak{
     text-align: left;
+    padding: 10px;
     margin-bottom:7%;
     background-color: rgba(87,110,114,0.9);
     width: 60%;
@@ -146,7 +147,6 @@ footer ul li{
 }
 #prvi{
     margin-bottom:5%;
-    animation-delay: 1s;
 }
 #pricing{
     padding: 5%;
@@ -163,7 +163,12 @@ footer ul li{
     color: white;
 }
 #upute-forma{
-    width: 70%;
+    width: 58%;
+    margin-right: 0;
+    text-align: left;
+}
+#upute-forma li{
+    width: 90%;
 }
 /**************************FORMS**********************************/
 #form .container-fluid{
@@ -185,7 +190,7 @@ footer ul li{
     width: 1rem;
 }
 .contact-form label{
-    margin-right: 2rem;
+    margin-right: 4rem;
 }
 .contact-form textarea{
     height: 200px;
