@@ -4,7 +4,7 @@ body{
     text-align: center;
 }
 h1, h2, h3, h4, h5, h6{
-    font-family: 'Ubuntu', sans-serif
+    font-family: 'Ubuntu', sans-serif;
     line-height: 1.5; 
     font-weight: 900;
 } 
@@ -163,14 +163,6 @@ footer ul li{
 #Obnova-namjestaja .prica{
     color: white;
 }
-#upute-forma{
-    width: 58%;
-    margin-right: 0;
-    text-align: left;
-}
-#upute-forma li{
-    width: 90%;
-}
 /**************************FORMS**********************************/
 #form .container-fluid{
     padding-top: 3rem;
@@ -190,15 +182,12 @@ footer ul li{
     display: inline-block;
     width: 1rem;
 }
-.contact-form label{
-    margin-right: 4rem;
-}
 .contact-form textarea{
     height: 200px;
 }
-.contact-form input[type="radio"],
-.contact-form #radios{
-    margin-bottom: 2rem;
+.rdo{
+    display: inline-block;
+    width: 300px;
 }
 .contact-form input[type="checkbox"]{
     display: inline-block;
@@ -218,6 +207,14 @@ footer ul li{
     width: 70%;
     margin: 1rem auto;
     text-align: left;
+}
+#upute-forma{
+    width: 58%;
+    margin-right: 0;
+    text-align: left;
+}
+#upute-forma li{
+    width: 90%;
 }
 /**************************ANIMATIONS*******************************/
 @keyframes fadeIn-prica {

@@ -186,12 +186,14 @@
             <input type="text" name="ime" placeholder="Ime i prezime" required>
             <input type="tel" name="mob" placeholder="Broj mobitela" required>
             <input type="email" name="email" placeholder="Email adresa" required>
-            <div id="radios">
-              <input type="radio" name="izrada" value="izrada" id="izrada" checked required>
-              <label for="izrada">Izrada novog namještaja</label>
-              <input type="radio" name="izrada" value="izrada" id="obnova" required>
-              <label for="obnova">Obnova starog namještaja</label>
-            </div>
+              <div class="rdo">
+                <input type="radio" name="izrada" value="izrada" id="izrada" checked required>
+                <label for="izrada">Izrada novog namještaja</label>
+              </div>
+              <div class="rdo">
+                <input type="radio" name="izrada" value="izrada" id="obnova" required>
+                <label for="obnova">Obnova starog namještaja</label>
+              </div>
             <div>
               <label for="datoteka" id="upute-forma">Molimo priložite odgovarajuće datoteke prema zahtjevu:
                 <ul>
@@ -199,7 +201,7 @@
                   <li>Za obnavljanje starog namještaja priložite više slika trenutnog stanja postojećeg namještaja.</li>
                 </ul>
               </label>
-               <input type="file" id="datoteka" name="tlocrt" accept="image/png, image/jpeg, application/pdf,application/zip, image/svg+xml">
+               <input type="file" id="datoteka" name="tlocrt" accept="image/png, image/jpeg, application/pdf,application/zip, image/svg+xml" required>
             </div>
             <textarea name="poruka" placeholder="Opis zahtjeva"></textarea>
             <input type="checkbox" name="suglasnost" id="suglasnost" required>
