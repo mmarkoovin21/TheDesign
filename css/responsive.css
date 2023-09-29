@@ -1,0 +1,24 @@
+@media only screen and (max-width: 600px) {
+    h1, h2, h3, h4, h5, h6{
+        font-weight: 600;
+    }
+    h2{
+        font-size: 1.2rem;
+    }
+/******************************CLASSES*******************************/
+.container-fluid{
+    padding: 1rem 1.5rem;
+}
+
+/*******************************ID-S*********************************/
+#prvi{
+    width: 90%;
+}
+#drugi.prica-pocetak{
+    width: 90%;
+    margin-left: 1.5rem;
+}
+
+/***************************CONTACT*FORM*****************************/
+
+}

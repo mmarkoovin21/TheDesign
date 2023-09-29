@@ -4,7 +4,7 @@ body{
     text-align: center;
 }
 h1, h2, h3, h4, h5, h6{
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Ubuntu', sans-serif
     line-height: 1.5; 
     font-weight: 900;
 } 
@@ -91,6 +91,7 @@ footer ul li{
 .nav-link{
     font-size: 1.3rem;
     font-weight: 300;
+    color: white;
 }
 .desno{
     text-align: right;
@@ -219,16 +220,6 @@ footer ul li{
     text-align: left;
 }
 /**************************ANIMATIONS*******************************/
-@keyframes naslov{
-    0%{
-        opacity: 0;
-        transform: translateY(-10%);
-    }
-    100%{
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 @keyframes fadeIn-prica {
     from {
         opacity: 0; 
