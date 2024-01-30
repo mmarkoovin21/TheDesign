@@ -7,12 +7,12 @@ document.addEventListener("click",function (e){
           const myModal = new bootstrap.Modal(document.getElementById('gallery-modal'));
           myModal.show();
     }
-  });
+});
   // Animacija naslova
-  const prviNaslov = document.querySelector("#prvi");
-  const drugiNaslov = document.querySelector("#drugi");
+const prviNaslov = document.querySelector("#prvi");
+const drugiNaslov = document.querySelector("#drugi");
 
-  document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function() {
     setTimeout(function (){
         prviNaslov.style.opacity = 1;
         prviNaslov.style.animation = "fadeIn-prica 1s ease-in-out forwards";
