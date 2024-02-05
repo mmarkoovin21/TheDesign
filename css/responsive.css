@@ -1,26 +1,22 @@
 @media only screen and (max-width: 600px) {
     h1, h2, h3, h4, h5, h6{
-        font-weight: 600;
+        font-weight: 600;   
     }
 /******************************CLASSES*******************************/
 .container-fluid{
     padding: 5% 10%;
 }
 .prica-pocetak{
-    font-size: 1.3rem;
+    font-size: 5rem;
+    margin: 0 auto;
+}
+.lijevo{
+    text-align: left;
 }
 /*******************************ID-S*********************************/
-#prvi{
-    width: 90%;
-}
 #podaci{
     width: 99%;
 }
-#drugi.prica-pocetak{
-    width: 90%;
-    margin-left: 1.5rem;
-}
-
 /***************************CONTACT*FORM*****************************/
 .form{
     width: 80%;
