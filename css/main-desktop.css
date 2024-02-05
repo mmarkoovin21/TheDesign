@@ -219,4 +219,25 @@ footer ul li{
         opacity: 1;
     }
 }
-/*************************NESTED*CLASSES*******************************/
+/*************************POPUP*MODAL*****************************/
+section i{
+    color: white;
+    padding: 1rem;
+}
+#prev{
+    padding: 10rem 1rem;
+}
+#next{
+    padding: 10rem 1rem;
+}
+section .modal-layer {
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+}
+section .modal-layer .slide-img {
+    margin-top:15vh;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
