@@ -39,4 +39,19 @@
   #suglasnost + label{
     width: 90%;
   }
+  /***************************POPUP*MODAL*****************************/
+  section i{
+    padding: 5px;
+    z-index: 10;
+  }
+    #prev{
+        padding: 3rem 1rem;
+    }
+    #next{
+        padding: 3rem 1rem;
+    }
+    section .modal-layer .slide-img{
+        background-size: 100%;
+        width: 99%;
+    }
 }

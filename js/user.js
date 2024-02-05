@@ -1,3 +1,13 @@
+  // Animacija naslova
+const prviNaslov = document.querySelector("#prvi");
+
+document.addEventListener("DOMContentLoaded", async function() {
+    setTimeout(function (){
+        prviNaslov.style.opacity = 1;
+        prviNaslov.style.animation = "fadeIn-prica 1s ease-in-out forwards";
+    }, 1000);
+});
+
 // Za galeriju (modal)
 
 //Polje slika
@@ -22,7 +32,7 @@ nextBtn.style.cssText = `cursor : pointer;`;
 let activeIndex;
 
 for (let i = 0; i < itemsImgs.length; i++) {
-  itemsImgs[i].addEventListener("click", function (e) {
+  itemsImgs[i].addEventListener("click", async function (e) {
     popSlider.style.display = "flex";
     let activeSrc = e.target.src;
     bgSlide.style.backgroundImage = `url(${activeSrc})`;
@@ -38,7 +48,7 @@ function removeSlider() {
 
 nextBtn.addEventListener("click", nextSlider);
 
-function nextSlider() {
+async function nextSlider() {
   activeIndex++;
   if (activeIndex == itemsImgs.length) {
     activeIndex = 0;
@@ -49,7 +59,7 @@ function nextSlider() {
 
 prevBtn.addEventListener("click", prevSlider);
 
-function prevSlider() {
+async function prevSlider() {
   activeIndex--;
   if (activeIndex < 0) {
     activeIndex = itemsImgs.length - 1;
@@ -59,7 +69,7 @@ function prevSlider() {
 }
 
 // keyboard events
-document.addEventListener("keydown", function (e) {
+document.addEventListener("keydown", async function (e) {
   if (e.key == "Escape") {
     removeSlider();
   } else if (e.key == "ArrowRight") {
@@ -67,14 +77,4 @@ document.addEventListener("keydown", function (e) {
   } else if (e.key == "ArrowLeft") {
     prevSlider();
   }
-});
-
-  // Animacija naslova
-const prviNaslov = document.querySelector("#prvi");
-
-document.addEventListener("DOMContentLoaded", function() {
-    setTimeout(function (){
-        prviNaslov.style.opacity = 1;
-        prviNaslov.style.animation = "fadeIn-prica 1s ease-in-out forwards";
-    }, 1000);
 });
