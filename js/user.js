@@ -80,9 +80,9 @@ document.addEventListener("keydown", function (e) {
 });
 
 // funkcija za vraćanje navigacije
-function collapseNavbar(){
-  var navbarColapse = document.querySelector('collapse-navbar');
-    if(navbarColapse.classList.contains('show')){
-      navbarColapse.classList.remove('show');
-    }
-}
+var navbarLinksDiv = document.getElementById("navbarSupportedContent");
+var navButton = document.getElementsByClassName("navbar-toggler");
+  navbarLinksDiv.addEventListener('click', ()=>{
+    navbarLinksDiv.classList.remove("show");
+    navButton.classList.add("collapsed");
+    });
