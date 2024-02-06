@@ -1,7 +1,7 @@
   // Animacija naslova
 const prviNaslov = document.querySelector("#prvi");
 
-document.addEventListener("DOMContentLoaded", async function() {
+document.addEventListener("DOMContentLoaded", function() {
     setTimeout(function (){
         prviNaslov.style.opacity = 1;
         prviNaslov.style.animation = "fadeIn-prica 1s ease-in-out forwards";
@@ -32,7 +32,7 @@ nextBtn.style.cssText = `cursor : pointer;`;
 let activeIndex;
 
 for (let i = 0; i < itemsImgs.length; i++) {
-  itemsImgs[i].addEventListener("click", async function (e) {
+  itemsImgs[i].addEventListener("click", function (e) {
     popSlider.style.display = "flex";
     let activeSrc = e.target.src;
     bgSlide.style.backgroundImage = `url(${activeSrc})`;
@@ -68,8 +68,8 @@ async function prevSlider() {
   bgSlide.style.backgroundImage = `url(${imgSrc})`;
 }
 
-// keyboard events
-document.addEventListener("keydown", async function (e) {
+// događaji z alistanje galerije pomoću tipkovinice
+document.addEventListener("keydown", function (e) {
   if (e.key == "Escape") {
     removeSlider();
   } else if (e.key == "ArrowRight") {
@@ -78,3 +78,11 @@ document.addEventListener("keydown", async function (e) {
     prevSlider();
   }
 });
+
+// funkcija za vraćanje navigacije
+function collapseNavbar(){
+  var navbarColapse = document.querySelector('collapse-navbar');
+    if(navbarColapse.classList.contains('show')){
+      navbarColapse.classList.remove('show');
+    }
+}
