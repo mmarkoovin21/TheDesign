@@ -13,6 +13,9 @@
 .lijevo{
     text-align: left;
 }
+.navbar-brand{
+    width: 3rem;
+}
 /*******************************ID-S*********************************/
 #podaci{
     width: 99%;
