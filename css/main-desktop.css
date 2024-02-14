@@ -154,6 +154,22 @@ footer ul li{
 #Obnova-namjestaja .prica{
     color: white;
 }
+#namjestaj-izrada{
+    height: 2vh;
+    z-index: -5;
+}
+#obnova-izrada{
+    height: 2vh;
+    z-index: -5;
+}
+#usluge-nav{
+    height: 2vh;
+    z-index: -5;
+}
+#forma-nav{
+    height: 2vh;
+    z-index: -5;
+}
 /**************************FORMS**********************************/
 #form .container-fluid{
     padding-top: 3rem;
