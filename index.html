@@ -56,7 +56,7 @@
 
     <!-- Naslov -->
     <div class="container-fluid" id="naslov">
-        <h2 class="prica-pocetak" id="prvi">Solutions for every corner<br>
+        <h2 class="prica-pocetak" id="prvi">Solutions for every corner<br></h2>
     </div>
     <div id="namjestaj-izrada"></div>
 </section>
@@ -177,17 +177,17 @@
         <form action="#" method="post">
             <input type="text" id="ime" name="ime" placeholder="Ime i prezime" required>
             <input type="tel" id="mob" name="mob" placeholder="Broj mobitela" required>
-            <input type="email" name="email" placeholder="Email adresa" required>
+            <input type="email" id="email" name="email" placeholder="Email adresa" required>
             <div>
               <label>Izaberite preferirani način povratnog kontakta</label>
             </div>
             <br>
               <div class="rdo">
-                <input type="radio" name="izrada" value="izrada" id="izrada" checked required>
-                <label for="izrada">Mobitel</label>
+                <input type="radio" name="odabir" value="Mobitel" id="odabir-mob" checked required>
+                <label for="odabir-mob">Mobitel</label>
               </div>
               <div class="rdo">
-                <input type="radio" name="izrada" value="izrada" id="obnova" required>
+                <input type="radio" name="odabir" value="E-mail" id="odabir-mail" required>
                 <label for="obnova">E-mail</label>
               </div>
             <!-- <div>  ovo mi potencijalno ne treba
@@ -204,7 +204,7 @@
             <label for="suglasnost">Suglasnost za korištenje podataka u svrhu izrade informativne ponude.</label>
             <button type="submit">POŠALJI</button>
         </form>
-    </div>
+      <div id = "status"></div>
   </section>
 
   <!-- Footer -->
@@ -225,5 +225,6 @@
     <p class="copyright">&copy; Copyright The Design</p>
   </footer>
   <script src="js/user.js"></script>
+  <script src="js/mail.js"></script>
 </body>
 </html>
