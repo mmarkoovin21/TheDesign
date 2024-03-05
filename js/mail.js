@@ -27,12 +27,18 @@ document.addEventListener("DOMContentLoaded", ()=> {
             "odabir" : odabir,
             "poruka" : poruka.value
         }
+
+        console.log(obj);
+        let h = new Headers();
+        h.set("Content-Type", "application/json");
+
         fetch("/kontakt-forma.php", {
+            headers: h,
             method: "POST",
             body: JSON.stringify(obj),
-        }).then((data)=>{
+        }).then(data => data.json()).then((data)=>{
             console.log(data);
-             if(data.status){
+             if(data.status === true){
                 statusSlanja.innerHTML = "<p>Poruka je uspješno poslana</p>"
              }else{
                 statusSlanja.innerHTML = "<p>Greška! Poruka nije poslana</p>"
