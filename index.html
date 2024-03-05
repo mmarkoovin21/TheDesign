@@ -178,15 +178,19 @@
             <input type="text" id="ime" name="ime" placeholder="Ime i prezime" required>
             <input type="tel" id="mob" name="mob" placeholder="Broj mobitela" required>
             <input type="email" name="email" placeholder="Email adresa" required>
+            <div>
+              <label>Izaberite preferirani način povratnog kontakta</label>
+            </div>
+            <br>
               <div class="rdo">
                 <input type="radio" name="izrada" value="izrada" id="izrada" checked required>
-                <label for="izrada">Izrada novog namještaja</label>
+                <label for="izrada">Mobitel</label>
               </div>
               <div class="rdo">
                 <input type="radio" name="izrada" value="izrada" id="obnova" required>
-                <label for="obnova">Obnova starog namještaja</label>
+                <label for="obnova">E-mail</label>
               </div>
-            <div>
+            <!-- <div>  ovo mi potencijalno ne treba
               <label for="datoteka" id="upute-forma">Molimo priložite odgovarajuće datoteke prema zahtjevu:
                 <ul>
                   <li>Za izradu novog namještaja potrebno je priložiti tlocrt stana i idejnu skicu namještaja,</li>
@@ -194,7 +198,7 @@
                 </ul>
               </label>
                <input type="file" id="datoteka" name="tlocrt" accept="image/png, image/jpeg, application/pdf,application/zip, image/svg+xml">
-            </div>
+            </div> -->
             <textarea name="poruka" id="poruka" placeholder="Opis zahtjeva"></textarea>
             <input type="checkbox" name="suglasnost" id="suglasnost" required>
             <label for="suglasnost">Suglasnost za korištenje podataka u svrhu izrade informativne ponude.</label>
