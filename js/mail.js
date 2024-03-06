@@ -1,11 +1,12 @@
 document.addEventListener("DOMContentLoaded", ()=> {
-
     
     let imePrezime = document.getElementById("ime");
     let mobitel = document.getElementById("mob");
     let email = document.getElementById("email");
     let odabir = "";
+    let suglasnost = document.getElementById("suglasnost");
     let poruka = document.getElementById("poruka");
+
 
     if(document.getElementById("odabir-mob").checked){
         odabir = "Mobitel";
@@ -20,6 +21,8 @@ document.addEventListener("DOMContentLoaded", ()=> {
     forma.addEventListener("submit", (e)=>{
         e.preventDefault();
 
+        poruka.value = poruka.value.replace(/\n/g, '<br>');
+        
         let obj = {
             "ime-prezime" : imePrezime.value,
             "email" : email.value,
@@ -28,7 +31,6 @@ document.addEventListener("DOMContentLoaded", ()=> {
             "poruka" : poruka.value
         }
 
-        console.log(obj);
         let h = new Headers();
         h.set("Content-Type", "application/json");
 
@@ -37,12 +39,22 @@ document.addEventListener("DOMContentLoaded", ()=> {
             method: "POST",
             body: JSON.stringify(obj),
         }).then(data => data.json()).then((data)=>{
-            console.log(data);
              if(data.status === true){
                 statusSlanja.innerHTML = "<p>Poruka je uspješno poslana</p>"
              }else{
                 statusSlanja.innerHTML = "<p>Greška! Poruka nije poslana</p>"
              }
         });
+        fetch("/info-no-reply.php",{
+            headers: h,
+            method: "POST",
+            body: JSON.stringify({"primatelj-mail" : email.value}),
+        }).then((data)=>{
+            console.log(data);
+        });
+        imePrezime.value = mobitel.value = email.value = odabir = poruka.value = suglasnost.value = "";
+        document.getElementById("odabir-mob").checked = false;
+        document.getElementById("suglasnost").checked = false;
+        document.getElementById("odabir-mail").checked = true;
     });
 });
