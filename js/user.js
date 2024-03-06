@@ -1,11 +1,16 @@
   // Animacija naslova
-const prviNaslov = document.querySelector("#prvi");
+const prviNaslov = document.getElementById("prvi");
+const drugiNaslov = document.getElementById("drugi");
 
 document.addEventListener("DOMContentLoaded", function() {
     setTimeout(function (){
         prviNaslov.style.opacity = 1;
         prviNaslov.style.animation = "fadeIn-prica 1s ease-in-out forwards";
     }, 1000);
+    setTimeout(function (){
+      drugiNaslov.style.opacity = 1;
+      drugiNaslov.style.animation = "fadeIn-prica 1s ease-in-out forwards";
+  }, 1000);
 });
 
 // Za galeriju (modal)

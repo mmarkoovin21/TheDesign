@@ -12,6 +12,8 @@ document.addEventListener("DOMContentLoaded", ()=> {
         odabir = "Mobitel";
     }else if(document.getElementById("odabir-mail")){
         odabir = "E-mail";
+    }else{
+        odabir = "E-mail-a i Mobitel";
     }
     
     let statusSlanja = document.getElementById("status");
