@@ -78,6 +78,21 @@ footer ul li{
 	box-shadow: 0 0 15px rgba(0,0,0,0.4);
 	cursor: pointer;
 }
+.gallery-button{
+    width: 100%;
+    color: white;
+    border: none;
+    background-color: rgba(128, 128, 128, 0.2);
+    box-shadow: 0 0 5px rgba(0,0,0,0.4);
+    height: 14rem;
+    border-radius: 5px;
+	cursor: pointer;
+    transition: all 0.3s ease;
+}
+.gallery-button:hover{
+    background-color: rgba(128, 128, 128, 0.4);
+    font-size: large;
+}
 .navbar{
     padding: 0 1rem;
     background-color: #576F72;
