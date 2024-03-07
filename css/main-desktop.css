@@ -197,6 +197,11 @@ footer ul li{
     cursor: pointer;
     display: block;
     margin: 0 1rem 0 3rem;
+    transition: all 0.3s ease;
+}
+#sivi-tekst-dva button:hover{
+    font-size: large;
+    background-color: #8f8f8f;
 }
 #natuknice-pocetak{
     margin: 2rem auto;
@@ -240,6 +245,12 @@ footer ul li{
     cursor: pointer;
     display: block;
     margin: 2rem auto 0;
+    transition: all 0.3s ease;
+}
+#naslov button:hover{
+    color: black;
+    background-color: white;
+    font-size: large;
 }
 /**************************FORMS**********************************/
 #form .container-fluid{
@@ -280,6 +291,11 @@ footer ul li{
     cursor: pointer;
     display: block;
     margin: 0 auto;
+    transition: all 0.3s ease;
+}
+.contact-form button:hover{
+    font-size: large;
+    background-color: #8f8f8f;
 }
 .contact-form li{
     width: 70%;
