@@ -145,8 +145,8 @@ footer ul li{
 }
 .white-section#O-nama div:not(#namjestaj-izrada) p{
     display: flex;
-    width: 80%;
-    margin: auto 0;
+    width: 75%;
+    margin: auto auto;
 }
 /**************************ID-S***********************************/
 #gallery-modal .modal-img{
@@ -180,26 +180,22 @@ footer ul li{
     color: white;
 }
 #O-nama img{
-    width: 13rem;
+    margin-top: 0;
+    width: 14rem;
     height: 13rem;
 }
 #sivi-tekst{
-    display: flex;
-    flex-direction: row;
-    background-color: rgba(0, 0, 0, 0.3);
+    margin-top: 2rem;
+    background-color: rgba(125, 125, 125, 0.3);
     border-radius: 1em;
-    padding: 1rem;
     justify-content: center;
     align-items: center;
+    padding: 0.5rem;
 }
 #sivi-tekst-dva{
-    display: flex;
-    flex-direction: row;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(125, 125, 125, 0.3);
     border-radius: 1em;
     padding: 1rem;
-    justify-content: center;
-    align-items: center;
     font-weight: 600;
 }
 #sivi-tekst-dva button{
@@ -210,8 +206,7 @@ footer ul li{
     width: 15rem;
     border-radius: 5px;
     cursor: pointer;
-    display: block;
-    margin: 0 1rem 0 3rem;
+    margin: 2rem;
     transition: all 0.3s ease;
 }
 #sivi-tekst-dva button:hover{
