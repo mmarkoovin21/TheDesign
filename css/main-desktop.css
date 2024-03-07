@@ -92,9 +92,12 @@ span{
 	cursor: pointer;
     transition: all 0.3s ease;
 }
+.gallery-button a{
+    text-decoration: none;
+}
 .gallery-button:hover{
     background-color: rgba(128, 128, 128, 0.4);
-    font-size: large;
+    font-size: xx-large;
 }
 .navbar{
     padding: 0 1rem;
