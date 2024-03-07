@@ -2,12 +2,18 @@
 body{
     font-family: 'Montserrat', sans-serif;
     text-align: center;
+    background-color: #F0EBE3;
 }
 h1, h2, h3, h4, h5, h6{
     font-family: 'Ubuntu', sans-serif;
     line-height: 1.5; 
     font-weight: 900;
-} 
+}
+hr{
+    width: 65%;
+    margin: 0 auto;
+    border: 1px solid black;
+}
 p{
     color: #8f8f8f;
 }
@@ -79,7 +85,7 @@ footer ul li{
 .navbar-brand{
     width: 5rem;
 }
-.O-nama{
+.justifi{
     text-align: justify;
 }
 .nav-item{
@@ -122,6 +128,11 @@ footer ul li{
     color: black;
     margin-bottom: 2.3rem;
 }
+.white-section#O-nama div:not(#namjestaj-izrada) p{
+    display: flex;
+    width: 80%;
+    margin: auto 0;
+}
 /**************************ID-S***********************************/
 #gallery-modal .modal-img{
 	width: 100%;
@@ -145,6 +156,50 @@ footer ul li{
     text-align: left;
     width: 60%;
     margin: 0 auto;
+}
+#Izrada-namjestaja a{
+    font-size: large;
+}
+#Obnova-namjestaja a{
+    font-size: large;
+    color: white;
+}
+#O-nama img{
+    width: 13rem;
+    height: 13rem;
+}
+#sivi-tekst{
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 1em;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+#sivi-tekst-dva{
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 1em;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+}
+#sivi-tekst-dva button{
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    width: 15rem;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 0 1rem 0 3rem;
+}
+#natuknice-pocetak{
+    margin: 2rem auto;
 }
 #pricing{
     padding: 5%;
