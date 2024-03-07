@@ -29,6 +29,9 @@ footer ul li{
     color: #8f8f8f;
     font-size: 1rem;
 }
+span{
+    font-weight: 600;
+}
 /**************************CLASSES********************************/
 .big-heading{
     font-size: 3.5rem;
@@ -148,6 +151,10 @@ footer ul li{
     width: 75%;
     margin: auto auto;
 }
+.podaci-obrta{
+    text-align: left;
+    margin: auto 0;
+}
 /**************************ID-S***********************************/
 #gallery-modal .modal-img{
 	width: 100%;
@@ -155,6 +162,10 @@ footer ul li{
 #mail{
     color: #8f8f8f;
     font-size: 1rem;
+}
+#mini{
+    font-size: x-small;
+    font-weight: 400;
 }
 #usluge{
     position: relative;
@@ -166,11 +177,6 @@ footer ul li{
 #naslov{
     padding: 0;
     opacity: 0; 
-}
-#podaci{
-    text-align: left;
-    width: 60%;
-    margin: 0 auto;
 }
 #Izrada-namjestaja a{
     font-size: large;
