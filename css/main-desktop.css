@@ -187,6 +187,11 @@ span{
 #Izrada-namjestaja a{
     font-size: large;
 }
+#Obnova-naslov-galerija a{
+    font-size: large;
+    color: white;
+    text-decoration: none;
+}
 #Galerija a{
     font-size: large;
     color: white;
