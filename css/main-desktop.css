@@ -158,6 +158,9 @@ span{
     text-align: left;
     margin: auto 0;
 }
+.gallery div{
+    margin-bottom: 1rem;
+}
 /**************************ID-S***********************************/
 #gallery-modal .modal-img{
 	width: 100%;
