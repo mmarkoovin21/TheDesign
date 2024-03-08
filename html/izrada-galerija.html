@@ -64,7 +64,38 @@
         </div>
         <div id="o-nama"></div>
     </section>
-    <h2>ovdje će biti slike izrade namještaja</h2>
+    
+    <section class="colored-section" id="form">
+      <div class="container-fluid">
+        <h2 class="naslov">KONTAKTIRAJTE NAS</h2>
+        <div class="container contact-form">
+          <form action="#" method="post">
+              <input type="text" id="ime" name="ime" placeholder="Ime i prezime" required>
+              <input type="tel" id="mob" name="mob" placeholder="Broj mobitela">
+              <input type="email" id="email" name="email" placeholder="Email adresa" required>
+              <div>
+                <label>Izaberite preferirani način povratnog kontakta</label>
+              </div>
+              <br>
+              <div class="rdo">
+                <input type="radio" name="odabir" value="E-mail" id="odabir-mail" checked>
+                <label for="obnova">E-mail</label>
+              </div>
+              <div class="rdo">
+                <input type="radio" name="odabir" value="Mobitel" id="odabir-mob">
+                <label for="odabir-mob">Mobitel</label>
+              </div>
+              <div class="rdo">
+                <input type="radio" name="odabir" value="Email-a i Mobitel" id="odabir-oboje">
+                <label for="odabir-mob">Oboje</label>
+              </div>
+              <textarea name="poruka" id="poruka" placeholder="Opis zahtjeva" required></textarea>
+              <input type="checkbox" name="suglasnost" id="suglasnost" required>
+              <label for="suglasnost">Suglasnost za korištenje podataka u svrhu izrade informativne ponude.</label>
+              <button type="submit">POŠALJI</button>
+          </form>
+        <div id = "status"></div>
+    </section>
 
     <footer class="white-section" id="footer">
         <div>
