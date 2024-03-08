@@ -127,7 +127,7 @@ span{
     border-radius: 0.5rem;
     box-shadow: 0 0 15px rgba(0,0,0,0.4);
 }
-.prica-pocetak{
+.naslov-pocetak{
     font-family: "Dancing Script";
     text-align: center;
     font-size: 8rem;
@@ -183,6 +183,10 @@ span{
 }
 #Izrada-namjestaja a{
     font-size: large;
+}
+#Galerija a{
+    font-size: large;
+    color: white;
 }
 #Obnova-namjestaja a{
     font-size: large;
@@ -389,3 +393,12 @@ section .modal-layer .slide-img {
         transform: translateX(-159%);
     }
 }
+/********************IZRADA*NAMJEŠTAJA*GALERIJA**********************/
+#Izrada-naslov-galerija p{
+    margin: 1rem 1rem 3rem 0rem;
+}
+#sivi-tekst-dva p{
+    margin: auto 0;
+}
+
+/********************OBNOVA*NAMJEŠTAJA*GALERIJA**********************/
