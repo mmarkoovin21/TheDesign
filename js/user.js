@@ -36,6 +36,7 @@ for (let i = 0; i < itemsImgs.length; i++) {
     popSlider.style.display = "flex";
     let activeSrc = e.target.src;
     bgSlide.style.backgroundImage = `url(${activeSrc})`;
+    bgSlide.style,bacgroundSize = `50%`;
     activeIndex = itemsImgsArr.indexOf(e.target);
   });
 }
