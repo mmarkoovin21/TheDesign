@@ -25,10 +25,6 @@ a{
 img{
 	max-width: 100%;
 }
-footer ul li{
-    color: #8f8f8f;
-    font-size: 1rem;
-}
 span{
     font-weight: 600;
 }
@@ -161,7 +157,7 @@ span{
 }
 .podaci-obrta{
     text-align: left;
-    margin: auto 0;
+    color: black;
 }
 .gallery div{
     margin-bottom: 1rem;
@@ -204,18 +200,14 @@ span{
 #Obnova-namjestaja i{
     color: black;
 }
-#Galerija a{
-    font-size: large;
-    color: white;
-}
 #Obnova-namjestaja a{
     font-size: large;
     color: black;
 }
 #O-nama img{
     margin-top: 0;
-    width: 14rem;
-    height: 13rem;
+    width: 20%;
+    height: 20%;
 }
 #sivi-tekst{
     margin-top: 2rem;
@@ -223,7 +215,7 @@ span{
     border-radius: 1em;
     justify-content: center;
     align-items: center;
-    padding: 0.5rem;
+    padding: 1rem;
 }
 #sivi-tekst-dva{
     background-color: rgba(87, 110, 113, 0.1);
@@ -297,6 +289,13 @@ span{
 }
 #naslov a:hover{
     color: black;
+}
+#footer .col-lg-1{
+    font-weight: 600;
+}
+#footer img{
+    width: 18%;
+    height: 18%;
 }
 /**************************FORMS**********************************/
 #form .container-fluid{
