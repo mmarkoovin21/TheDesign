@@ -76,6 +76,9 @@ span{
 .features-icon:hover{
     color: #576F72;
 }
+.fa-arrow-right{
+    padding: 0 0 0 1rem;
+}
 .gallery img{
 	width: 100%;
 	box-shadow: 0 0 15px rgba(0,0,0,0.4);
@@ -193,7 +196,7 @@ span{
 }
 #Izrada-namjestaja a{
     font-size: large;
-    color: black;
+    color: white;
 }
 #Galerija a{
     font-size: large;
@@ -201,7 +204,7 @@ span{
 }
 #Obnova-namjestaja a{
     font-size: large;
-    color: white;
+    color: black;
 }
 #O-nama img{
     margin-top: 0;
@@ -251,7 +254,7 @@ span{
     background-size: cover;
     background-attachment: fixed;
 }
-#Obnova-namjestaja .prica{
+#Izrada-namjestaja .prica{
     color: white;
 }
 #izrada-namjestaja{
@@ -266,7 +269,7 @@ span{
     height: 2vh;
     z-index: -5;
 }
-#Kontaktirajte-nas{
+#kontaktirajte-nas{
     height: 2vh;
     z-index: -5;
 }
