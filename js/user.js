@@ -69,7 +69,7 @@ async function prevSlider() {
   bgSlide.style.backgroundImage = `url(${imgSrc})`;
 }
 
-// događaji z alistanje galerije pomoću tipkovinice
+// događaji za listanje galerije pomoću tipkovinice
 document.addEventListener("keydown", function (e) {
   if (e.key == "Escape") {
     removeSlider();

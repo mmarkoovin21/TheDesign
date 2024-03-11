@@ -347,14 +347,6 @@ span{
     margin: 1rem auto;
     text-align: left;
 }
-#upute-forma{
-    width: 58%;
-    margin-right: 0;
-    text-align: left;
-}
-#upute-forma li{
-    width: 90%;
-}
 /**************************ANIMATIONS*******************************/
 @keyframes fadeIn-prica {
     from {
@@ -389,8 +381,6 @@ section .modal-layer .slide-img {
     background-position: 50% 50%;
     background-repeat: no-repeat;
 }
-
-
 /*********************************PAARTNERS*SLIDER********************************/
 .partners-container{
     overflow: hidden;
