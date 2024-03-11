@@ -111,6 +111,7 @@ span{
 }
 .nav-item{
     display: flex;
+    margin: auto 0;
 }
 .nav-link{
     font-size: 1.3rem;
@@ -150,7 +151,7 @@ span{
     color: black;
     margin-bottom: 2.3rem;
 }
-.white-section#O-nama div:not(#namjestaj-izrada) p{
+.white-section#O-nama div:not(#izrada-namjestaja) p{
     display: flex;
     width: 75%;
     margin: auto auto;
@@ -192,6 +193,7 @@ span{
 }
 #Izrada-namjestaja a{
     font-size: large;
+    color: black;
 }
 #Galerija a{
     font-size: large;
@@ -245,32 +247,32 @@ span{
     padding: 2% 15%;
 }
 #title{
-    background-image: url("https://thedesign.hr/dokumentacija/pic/kuhinja-blur-dark.png");
+    background-image: url("/dokumentacija/pic/kuhinja-blur-dark.png");
     background-size: cover;
     background-attachment: fixed;
 }
 #Obnova-namjestaja .prica{
     color: white;
 }
-#namjestaj-izrada{
+#izrada-namjestaja{
     height: 2vh;
     z-index: -5;
 }
-#obnova-izrada{
+#obnova-namjestaja{
     height: 2vh;
     z-index: -5;
 }
-#usluge-nav{
+#postupak-narucivanja{
     height: 2vh;
     z-index: -5;
 }
-#forma-nav{
+#Kontaktirajte-nas{
     height: 2vh;
     z-index: -5;
 }
 #naslov button{
     background-color: transparent;
-    color: #fff;
+    color: black;
     padding: 10px 20px;
     border: 1px solid white;
     border-radius: 5px;
@@ -283,6 +285,9 @@ span{
     color: black;
     background-color: white;
     font-size: large;
+}
+#naslov a:hover{
+    color: black;
 }
 /**************************FORMS**********************************/
 #form .container-fluid{
