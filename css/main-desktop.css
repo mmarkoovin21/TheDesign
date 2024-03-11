@@ -110,7 +110,7 @@ span{
     width: 5rem;
 }
 .justifi{
-    text-align: justify;
+    text-align: left;
 }
 .nav-item{
     display: flex;
@@ -171,6 +171,9 @@ span{
     color: white;
     text-decoration: none;
 }
+.upit i:hover{
+    color: black;
+}
 /**************************ID-S***********************************/
 #gallery-modal .modal-img{
 	width: 100%;
@@ -198,6 +201,9 @@ span{
     font-size: large;
     color: white;
 }
+#Obnova-namjestaja i{
+    color: black;
+}
 #Galerija a{
     font-size: large;
     color: white;
@@ -213,14 +219,14 @@ span{
 }
 #sivi-tekst{
     margin-top: 2rem;
-    background-color: rgba(125, 125, 125, 0.3);
+    background-color: rgba(87, 110, 113, 0.1);
     border-radius: 1em;
     justify-content: center;
     align-items: center;
     padding: 0.5rem;
 }
 #sivi-tekst-dva{
-    background-color: rgba(125, 125, 125, 0.3);
+    background-color: rgba(87, 110, 113, 0.1);
     border-radius: 1em;
     padding: 1rem;
     font-weight: 600;
@@ -266,7 +272,7 @@ span{
     z-index: -5;
 }
 #postupak-narucivanja{
-    height: 2vh;
+    height: 5vh;
     z-index: -5;
 }
 #kontaktirajte-nas{
