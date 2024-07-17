@@ -1,11 +1,12 @@
 /**************************HTML*TAGS********************************/
 body{
-    font-family: 'Lato', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-size: large;
     text-align: center;
     background-color: #F0EBE3;
 }
 h1, h2, h3, h4, h5, h6{
-    font-family: 'Lato', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     line-height: 1.5; 
     font-weight: 900;
 }
@@ -114,7 +115,7 @@ span{
 }
 .nav-link{
     font-size: 1.3rem;
-    font-weight: 300;
+    font-weight: 500;
     color: white;
 }
 .desno{
@@ -137,12 +138,13 @@ span{
     width: 99%;
 }
 .dodatni-tekst{
-    font-family: "Lato";
+    font-family: "Montserrat";
     font-weight: 600;
     text-align: center;
     font-size: 1.5rem;
     margin: 0vh auto;
     color: white;
+    opacity: 0.6;
     width: 99%; 
 }
 .prica{
