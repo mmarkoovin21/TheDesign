@@ -369,6 +369,12 @@ section i{
     padding: 1rem;
     z-index: 3;
 }
+.modal-backdrop {
+    opacity: 0.9 !important;
+}
+#closeBtn{
+    z-index: 5;
+}
 #prev{
     padding: 10rem 1rem;
 }
@@ -377,8 +383,9 @@ section i{
 }
 section .modal-layer {
     inset: 0;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0);
     display: none;
+    z-index: 4;
 }
 section .modal-layer .slide-img {
     width: 75%;
