@@ -48,7 +48,7 @@ span{
     padding: 5% 15%;
 }
 #title .container-fluid{
-    padding: 7% 3%;
+    padding: 5% 3%;
 }
 .copyright{
     margin: 20px 0;
@@ -169,7 +169,8 @@ span{
     color: white;
     text-decoration: none;
 }
-.upit i:hover{
+.upit:hover i,
+.upit:hover a{
     color: black;
 }
 /**************************ID-S***********************************/
@@ -194,6 +195,11 @@ span{
 #naslov{
     padding: 0;
     opacity: 0; 
+}
+#naslov div{
+    border: 2mm solid rgba(174, 174, 174, 0.6);
+    border-radius: 20px;
+    padding: 4rem 20px;
 }
 #Izrada-namjestaja a{
     font-size: large;
@@ -288,9 +294,6 @@ span{
     color: black;
     background-color: white;
     font-size: large;
-}
-#naslov a:hover{
-    color: black;
 }
 #footer .col-lg-1{
     font-weight: 600;
