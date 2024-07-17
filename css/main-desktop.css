@@ -80,6 +80,8 @@ span{
 	width: 100%;
 	box-shadow: 0 0 15px rgba(0,0,0,0.4);
 	cursor: pointer;
+    object-fit: cover;
+    height: 20rem;
 }
 .gallery-button{
     width: 100%;
