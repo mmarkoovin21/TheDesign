@@ -74,7 +74,7 @@ span{
     color: #576F72;
 }
 .fa-arrow-right{
-    padding: 0 0 0 1rem;
+    padding: 0 0 0 0.5rem;
 }
 .gallery img{
 	width: 100%;
@@ -89,13 +89,11 @@ span{
     border: none;
     background-color: rgba(128, 128, 128, 0.2);
     box-shadow: 0 0 5px rgba(0,0,0,0.4);
-    height: 14rem;
+    height: 20rem;
     border-radius: 5px;
 	cursor: pointer;
-    transition: all 0.3s ease;
-}
-.gallery-button a{
     text-decoration: none;
+    transition: all 0.3s ease;
 }
 .gallery-button:hover{
     background-color: rgba(128, 128, 128, 0.4);
@@ -166,13 +164,11 @@ span{
 .gallery div{
     margin-bottom: 1rem;
 }
-.upit a{
-    font-size: large;
+.upit{
     color: white;
     text-decoration: none;
 }
-.upit:hover i,
-.upit:hover a{
+.upit:hover i{
     color: black;
 }
 /**************************ID-S***********************************/
@@ -204,6 +200,7 @@ span{
     padding: 4rem 20px;
 }
 #Izrada-namjestaja a{
+    width: 100%;
     font-size: large;
     color: white;
 }
@@ -213,6 +210,10 @@ span{
 #Obnova-namjestaja a{
     font-size: large;
     color: black;
+}
+#Obnova-namjestaja .gallery-button{
+    color: black;
+
 }
 #O-nama img{
     margin-top: 0;
@@ -236,7 +237,7 @@ span{
 #sivi-tekst-dva button{
     background-color: #333;
     color: #fff;
-    padding: 10px 20px;
+    padding: 20px 10px;
     border: none;
     width: 15rem;
     border-radius: 5px;
@@ -283,7 +284,6 @@ span{
 }
 #naslov button{
     background-color: transparent;
-    color: black;
     padding: 10px 20px;
     border: 1px solid white;
     border-radius: 5px;
