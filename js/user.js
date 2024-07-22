@@ -88,6 +88,13 @@ var navButton = document.getElementsByClassName("navbar-toggler");
     navButton.classList.add("collapsed");
     });
 
+// linkovi gumbi za galeriju
+document.querySelectorAll('.gallery-button').forEach(button => {
+  button.addEventListener('click', function() {
+    window.location.href = this.getAttribute('data-href');
+  });
+});
+
 // linkovi gumbi za kontakt
 document.querySelectorAll('.upit').forEach(button => {
   button.addEventListener('click', function() {
