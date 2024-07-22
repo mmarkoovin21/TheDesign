@@ -87,3 +87,10 @@ var navButton = document.getElementsByClassName("navbar-toggler");
     navbarLinksDiv.classList.remove("show");
     navButton.classList.add("collapsed");
     });
+
+// linkovi gumbi za kontakt
+document.querySelectorAll('.upit').forEach(button => {
+  button.addEventListener('click', function() {
+    window.location.href = this.getAttribute('data-href');
+  });
+});
