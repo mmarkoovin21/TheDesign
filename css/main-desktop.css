@@ -181,7 +181,7 @@ span{
 }
 #mini{
     font-size: x-small;
-    font-weight: 400;
+    font-weight: 600;
 }
 #usluge{
     position: relative;
@@ -421,7 +421,7 @@ section .modal-layer .slide-img {
 }
 /********************IZRADA*NAMJEŠTAJA*GALERIJA**********************/
 #Izrada-naslov-galerija p{
-    margin: 1rem 1rem 5rem 0rem;
+    margin: 1rem 2rem 5rem 0rem;
 }
 #sivi-tekst-dva p{
     margin: auto 0;
@@ -430,3 +430,6 @@ section .modal-layer .slide-img {
     padding-left: 0;
 }
 /********************OBNOVA*NAMJEŠTAJA*GALERIJA**********************/
+#Obnova-naslov-galerija p{
+    margin: 1rem 2rem 5rem 0rem;
+}
