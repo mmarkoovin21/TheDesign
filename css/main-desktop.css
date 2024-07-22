@@ -247,6 +247,7 @@ span{
 }
 #sivi-tekst-dva button:hover{
     font-size: large;
+    color: black;
     background-color: #8f8f8f;
 }
 #natuknice-pocetak{
