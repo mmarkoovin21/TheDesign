@@ -104,9 +104,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 body: JSON.stringify(obj),
             }).then(data => data.json()).then((data)=>{
                 if(data.status === true){
-                    statusSlanja.innerHTML = "<p id='greska'>Poruka je uspješno poslana</p>"
+                    statusSlanja.innerHTML = "<p id='porukaPoslana'>Poruka je uspješno poslana</p>"
                 }else{
-                    statusSlanja.innerHTML = "<p id='greska'>Greška! Poruka nije poslana</p>"
+                    statusSlanja.innerHTML = "<p id='greskaSlanja'>Greška! Poruka nije poslana</p>"
                 }
             });
             fetch("/info-no-reply.php",{
@@ -127,7 +127,7 @@ document.addEventListener("DOMContentLoaded", () => {
             porukaGreske = "";
             statusSlanja.innerHTML = "";
         }else{
-            statusSlanja.innerHTML = `<p id='greska'>${porukaGreske}</p>`;
+            statusSlanja.innerHTML = `<p id='greskaSlanja'>${porukaGreske}</p>`;
         }
     });
 });
