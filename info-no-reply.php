@@ -6,7 +6,7 @@ $template = "./mail-template.php";
 
 if (isset($_POST['primatelj-mail'])) {
     $to = $_POST['primatelj-mail'];
-    $subject = 'Poruka zaprimljena';
+    $subject = 'The Design - Automatski odgovor';
 
     if(file_exists($template)){
         $message = file_get_contents($template);
