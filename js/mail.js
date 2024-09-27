@@ -1,7 +1,9 @@
-let porukaGreske = "";
+let porukeGresaka = document.createElement("ul");
 function CheckNameInput(name) {
     if (name.value.length < 3) {
-        porukaGreske += "Ime i prezime mora sadržavati najmanje 3 slova! \n";
+        let porukaPrveGreske = document.createElement("li");
+        porukaPrveGreske.innerHTML = "Upiši minimalno 3 znaka u Ime i prezime.";
+        porukeGresaka.appendChild(porukaPrveGreske);
         name.style.borderRadius = "5px";
         name.style.border = "3px solid #A70A0A";
         return false;
@@ -12,7 +14,9 @@ const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
 
 function CheckEmailInput(email) {
     if (email.value.trim().length == 0 || regex.test(email.value) == false) {
-        porukaGreske += "Email nije u ispravnom formatu! \n";
+        let porukaDrugeGreske = document.createElement("li");
+        porukaDrugeGreske.innerHTML = "Ispravan format emaila je xxx@poslužitelj.domena.";
+        porukeGresaka.appendChild(porukaDrugeGreske);
         email.style.borderRadius = "5px";
         email.style.border = "3px solid #A70A0A";
         return false;
@@ -22,7 +26,9 @@ function CheckEmailInput(email) {
 
 function CheckNumberInput(number) {
     if (number.value.length != 10) {
-        porukaGreske += "Napišite broj u formatu 09x xxx xxxx! \n	";
+        let porukaTreceGreske = document.createElement("li");
+        porukaTreceGreske.innerHTML = "Ispravan format broja je 09x xxx xxxx.";
+        porukeGresaka.appendChild(porukaTreceGreske);
         number.style.borderRadius = "5px";
         number.style.border = "3px solid #A70A0A";
         return false;
@@ -32,7 +38,9 @@ function CheckNumberInput(number) {
 
 function CheckMessageInput(message) {
     if (message.value.length < 10) {
-        porukaGreske += "Poruka mora sadržavati najmanje 10 slova! \n";
+        let porukaCetvrteGreske = document.createElement("li");
+        porukaCetvrteGreske.innerHTML = "Upiši minimalno 10 znakova u Poruku.";
+        porukeGresaka.appendChild(porukaCetvrteGreske);
         message.style.border = "3px solid #A70A0A";
         message.style.borderRadius = "5px";
         return false;
@@ -42,7 +50,9 @@ function CheckMessageInput(message) {
 
 function CheckSuglasnost(suglasnost) {
     if (!suglasnost.checked) {
-        porukaGreske += "Morate prihvatiti uvjete korištenja! \n";
+        porukaPeteGreske = document.createElement("li");
+        porukaPeteGreske.innerHTML = "Prihvatite suglasnost za korištenje podataka ispod poruke.";
+        porukeGresaka.appendChild(porukaPeteGreske);
         return false;
     }
     return true;
@@ -74,7 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
     forma.addEventListener("submit", (e) => {
         e.preventDefault();
 
-        porukaGreske = "";
+        porukeGresaka = document.createElement("ul");
         resetInputStyles(imePrezime);
         resetInputStyles(mobitel);
         resetInputStyles(email);
@@ -124,10 +134,14 @@ document.addEventListener("DOMContentLoaded", () => {
             resetInputStyles(mobitel);
             resetInputStyles(email);
             resetInputStyles(poruka);
-            porukaGreske = "";
+            porukeGresaka = "";
             statusSlanja.innerHTML = "";
         }else{
-            statusSlanja.innerHTML = `<p id='greskaSlanja'>${porukaGreske}</p>`;
+            while (statusSlanja.firstChild) {
+                statusSlanja.removeChild(statusSlanja.firstChild);
+            }
+            statusSlanja.id = "greskaSlanja";
+            statusSlanja.appendChild(porukeGresaka);
         }
     });
 });
