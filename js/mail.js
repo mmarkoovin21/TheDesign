@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
         let messageValid = CheckMessageInput(poruka);
         let emailValid = CheckEmailInput(email);
         let numberValid = CheckNumberInput(mobitel);
-        let suglasnostValid = CheckSuglasnost(suglasnost);
+        CheckSuglasnost(suglasnost);
 
         if (nameValid && messageValid && emailValid && numberValid && suglasnost.checked) {
             poruka.value = poruka.value.replace(/\n/g, '<br>');
