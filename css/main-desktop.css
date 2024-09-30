@@ -81,7 +81,9 @@ img{
     width: 100%;
     color: white;
     border: none;
-    background-color: rgba(128, 128, 128, 0.2);
+    background-image: url("/dokumentacija/pic/Gumb_izrada_dark.jpg");
+    background-size: cover;
+    background-position: center;
     box-shadow: 0 0 5px rgba(0,0,0,0.4);
     height: 20rem;
     border-radius: 5px;
@@ -204,17 +206,15 @@ img{
     font-size: large;
     color: white;
 }
-#Obnova-namjestaja i{
-    color: black;
-}
 #Obnova-namjestaja a{
     margin-left: 0px;
     font-size: large;
     color: black;
 }
 #Obnova-namjestaja .gallery-button{
-    color: black;
-
+    background-image: url("/dokumentacija/pic/Gumb_izrada_dark.jpg");
+    background-size: cover;
+    background-position: center;
 }
 #O-nama img{
     margin-top: 0;
