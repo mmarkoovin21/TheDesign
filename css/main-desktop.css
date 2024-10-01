@@ -149,11 +149,6 @@ img{
     color: black;
     margin-bottom: 2.3rem;
 }
-.white-section#O-nama div:not(#izrada-namjestaja) p{
-    display: flex;
-    width: 75%;
-    margin: auto auto;
-}
 .podaci-obrta{
     text-align: left;
     color: black;
