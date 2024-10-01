@@ -14,12 +14,12 @@
         text-align: left;
         margin-top: 3rem;
     }
-    .navbar-brand{
-        width: 3rem;
-    }
     .naslov-pocetak{
         letter-spacing: 2px;
         font-size: 3rem;
+    }
+    .partners-container img {
+        height: 2rem;
     }
     /*******************************ID-S*********************************/
     #podaci{
@@ -34,7 +34,7 @@
         margin: 2rem auto 0.5rem;
     }
     #title .container-fluid{
-        margin-top: 2rem;
+        margin-top: 3rem;
     }
     /***************************CONTACT*FORM*****************************/
     .form{
