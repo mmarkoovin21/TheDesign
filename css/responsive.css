@@ -20,6 +20,10 @@
 #podaci{
     width: 99%;
 }
+#footer img{
+    width: 60%;
+    margin: 3rem auto 1rem;
+}
 /***************************CONTACT*FORM*****************************/
 .form{
     width: 80%;
