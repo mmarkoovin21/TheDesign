@@ -224,13 +224,16 @@ img{
     align-items: center;
     padding: 1rem;
 }
+#sivi-tekst p{
+    width: 75%;
+}
 #sivi-tekst-dva{
     background-color: rgba(87, 110, 113, 0.1);
     border-radius: 1em;
     padding: 1rem;
     font-weight: 600;
 }
-#sivi-tekst button{
+#sivi-tekst-dva button, #sivi-tekst button{
     background-color: #333;
     color: #fff;
     padding: 20px 10px;
