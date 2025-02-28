@@ -18,7 +18,10 @@ async function dohvatiSlikeIzrade() {
 
       const container = document.getElementById('izradaGalleryConteiner');
 
+
       images.forEach(imageName => {
+        console.log(imageName);
+
         const div = document.createElement('div');
         div.classList.add('col');
 
