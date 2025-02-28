@@ -14,17 +14,13 @@ document.addEventListener("DOMContentLoaded", function () {
 async function dohvatiSlikeIzrade() {
   fetch('https://thedesign.hr/apiIzrada.php')
     .then(response => response.json())
-    .then(res => {
-      console.log(res);
-      return res;
-    })
     .then(images => {
 
       const container = document.getElementById('izradaGalleryConteiner');
 
+      console.log(images);
 
       images.forEach(imageName => {
-        console.log(imageName);
 
         const div = document.createElement('div');
         div.classList.add('col');
