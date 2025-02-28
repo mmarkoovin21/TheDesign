@@ -25,7 +25,7 @@ async function dohvatiSlikeIzrade() {
         const img = document.createElement('img');
         img.classList.add('gallery-item');
         img.loading = 'lazy';
-        img.src = `/dokumentacija/pic/izrada/${imageName}`;
+        img.src = `https://www.thedesign.hr/dokumentacija/pic/izrada/${imageName}`;
         img.alt = 'slika1';
 
         div.appendChild(img);
