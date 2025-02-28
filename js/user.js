@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     prviNaslov.style.animation = "fadeIn-prica 1s ease-in-out forwards";
   }, 1000);
 
-  fetch('api.php')
+  fetch('apiIzrada.php')
     .then(response => response.json())
     .then(images => {
       const container = document.getElementById('izradaGalleryConteiner');
