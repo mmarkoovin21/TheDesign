@@ -14,6 +14,10 @@ document.addEventListener("DOMContentLoaded", function () {
 async function dohvatiSlikeIzrade() {
   fetch('/apiIzrada.php')
     .then(response => response.json())
+    .then(res => {
+      console.log(res);
+      return res;
+    })
     .then(images => {
 
       const container = document.getElementById('izradaGalleryConteiner');
