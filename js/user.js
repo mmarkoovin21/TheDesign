@@ -1,12 +1,29 @@
-  // Animacija naslova
+// Animacija naslova
 const prviNaslov = document.getElementById("naslov")
 
-document.addEventListener("DOMContentLoaded", function() {
-    setTimeout(function (){
-        prviNaslov.style.opacity = 1;
-        prviNaslov.style.animation = "fadeIn-prica 1s ease-in-out forwards";
-    }, 1000);
-});
+document.addEventListener("DOMContentLoaded", function () {
+  setTimeout(function () {
+    prviNaslov.style.opacity = 1;
+    prviNaslov.style.animation = "fadeIn-prica 1s ease-in-out forwards";
+  }, 1000);
+
+  fetch('api.php')
+    .then(response => response.json())
+    .then(images => {
+      const container = document.getElementById('izradaGalleryConteiner');
+      images.forEach(imageName => {
+        const imgElement = document.createElement('img');
+        imgElement.src = '/dokumentacija/pic/izrada/' + imageName;
+        imgElement.alt = 'Slika';
+        imgElement.className = "gallery-item";
+        imgElement.loading = "lazy"
+        container.appendChild(imgElement);
+      });
+    })
+    .catch(error => console.error('Došlo je do pogreške prilikom učitavanja slika:', error));
+}
+);
+
 
 // Za galeriju (modal)
 
@@ -36,7 +53,7 @@ for (let i = 0; i < itemsImgs.length; i++) {
     popSlider.style.display = "flex";
     let activeSrc = e.target.src;
     bgSlide.style.backgroundImage = `url(${activeSrc})`;
-    bgSlide.style,bacgroundSize = `50%`;
+    bgSlide.style, bacgroundSize = `50%`;
     activeIndex = itemsImgsArr.indexOf(e.target);
   });
 }
@@ -83,21 +100,22 @@ document.addEventListener("keydown", function (e) {
 // funkcija za vraćanje navigacije
 var navbarLinksDiv = document.getElementById("navbarSupportedContent");
 var navButton = document.getElementsByClassName("navbar-toggler");
-  navbarLinksDiv.addEventListener('click', ()=>{
-    navbarLinksDiv.classList.remove("show");
-    navButton.classList.add("collapsed");
-    });
+navbarLinksDiv.addEventListener('click', () => {
+  navbarLinksDiv.classList.remove("show");
+  navButton.classList.add("collapsed");
+});
 
 // linkovi gumbi za galeriju
 document.querySelectorAll('.gallery-button').forEach(button => {
-  button.addEventListener('click', function() {
+  button.addEventListener('click', function () {
     window.location.href = this.getAttribute('data-href');
   });
 });
 
 // linkovi gumbi za kontakt
 document.querySelectorAll('.upit').forEach(button => {
-  button.addEventListener('click', function() {
+  button.addEventListener('click', function () {
     window.location.href = this.getAttribute('data-href');
   });
 });
+
