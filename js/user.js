@@ -7,18 +7,28 @@ document.addEventListener("DOMContentLoaded", function () {
     prviNaslov.style.animation = "fadeIn-prica 1s ease-in-out forwards";
   }, 1000);
 
-  fetch('apiIzrada.php')
+  fetch('/apiIzrada.php')
     .then(response => response.json())
     .then(images => {
+      console.log(images);
+
       const container = document.getElementById('izradaGalleryConteiner');
+      console.log(container);
+
       images.forEach(imageName => {
-        const imgElement = document.createElement('img');
-        imgElement.src = '/dokumentacija/pic/izrada/' + imageName;
-        imgElement.alt = 'Slika';
-        imgElement.className = "gallery-item";
-        imgElement.loading = "lazy"
-        container.appendChild(imgElement);
+        const div = document.createElement('div');
+        div.classList.add('col');
+
+        const img = document.createElement('img');
+        img.classList.add('gallery-item');
+        img.loading = 'lazy';
+        img.src = `/dokumentacija/pic/izrada/${imageName}`;
+        img.alt = 'slika1';
+
+        div.appendChild(img);
+        container.appendChild(div);
       });
+
     })
     .catch(error => console.error('Došlo je do pogreške prilikom učitavanja slika:', error));
 }
