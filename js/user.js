@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
 );
 
 async function dohvatiSlikeIzrade() {
-  fetch('./apiIzrada.php')
+  fetch('https://thedesign.hr/apiIzrada.php')
     .then(response => response.json())
     .then(res => {
       console.log(res);
