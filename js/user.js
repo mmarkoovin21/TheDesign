@@ -7,13 +7,16 @@ document.addEventListener("DOMContentLoaded", function () {
     prviNaslov.style.animation = "fadeIn-prica 1s ease-in-out forwards";
   }, 1000);
 
+  dohvatiSlikeIzrade();
+}
+);
+
+async function dohvatiSlikeIzrade() {
   fetch('/apiIzrada.php')
     .then(response => response.json())
     .then(images => {
-      console.log(images);
 
       const container = document.getElementById('izradaGalleryConteiner');
-      console.log(container);
 
       images.forEach(imageName => {
         const div = document.createElement('div');
@@ -32,8 +35,6 @@ document.addEventListener("DOMContentLoaded", function () {
     })
     .catch(error => console.error('Došlo je do pogreške prilikom učitavanja slika:', error));
 }
-);
-
 
 // Za galeriju (modal)
 
