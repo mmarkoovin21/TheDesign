@@ -22,6 +22,10 @@
         height: 2rem;
     }
     /*******************************ID-S*********************************/
+    #closeBtn, #prev, #next{
+        background-color: rgba(0, 0, 0, 0.3);
+
+    }
     #podaci{
         width: 99%;
     }
