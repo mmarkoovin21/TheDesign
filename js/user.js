@@ -6,40 +6,8 @@ document.addEventListener("DOMContentLoaded", function () {
     prviNaslov.style.opacity = 1;
     prviNaslov.style.animation = "fadeIn-prica 1s ease-in-out forwards";
   }, 1000);
-
-  dohvatiSlikeIzrade();
 }
 );
-
-async function dohvatiSlikeIzrade() {
-  fetch('https://thedesign.hr/apiIzrada.php')
-    .then(response => response.json())
-    .then(images => {
-
-      const container = document.getElementById('izradaGalleryConteiner');
-
-      console.log(images);
-
-      images.forEach(imageName => {
-
-        const div = document.createElement('div');
-        div.classList.add('col');
-
-        const img = document.createElement('img');
-        img.classList.add('gallery-item');
-        img.loading = 'lazy';
-        img.src = `https://www.thedesign.hr/dokumentacija/pic/izrada/${imageName}`;
-        img.alt = 'slika1';
-
-        div.appendChild(img);
-        container.appendChild(div);
-      });
-
-    })
-    .catch(error => console.error('Došlo je do pogreške prilikom učitavanja slika:', error));
-}
-
-// Za galeriju (modal)
 
 //Polje slika
 let itemsImgs = document.querySelectorAll(".gallery-item");
