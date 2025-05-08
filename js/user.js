@@ -1,5 +1,5 @@
 // Animacija naslova
-const prviNaslov = document.getElementById("naslov")
+const prviNaslov = document.getElementById("naslov");
 
 document.addEventListener("DOMContentLoaded", function () {
   setTimeout(function () {

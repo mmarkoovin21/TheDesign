@@ -1,106 +1,74 @@
-
 document.addEventListener("DOMContentLoaded", function () {
-    dohvatiSlikeIzrade();
-    dohvatiSlikeObnova();
-    dohvatiSlikePrveDvijeIzrade();
-    dohvatiSlikePrveDvijeObnova();
-}
-);
+  const baseUrl = window.location.origin;
 
-async function dohvatiSlikeIzrade() {
-    fetch('https://thedesign.hr/apiIzrada.php')
-        .then(response => response.json())
-        .then(images => {
+  dohvatiSlike(`${baseUrl}/apiIzrada.php`, 
+               'izradaGalleryConteiner', 
+               'pic/izrada');
 
-            const container = document.getElementById('izradaGalleryConteiner');
+  dohvatiSlike(`${baseUrl}/apiObnova.php`, 
+               'obnovaGalleryConteiner', 
+               'pic/obnova');
 
-            images.forEach(imageName => {
+  dohvatiPrveDvije(`${baseUrl}/apiIzrada.php`, 
+                  'prveDvijeIzrada', 
+                  'pic/izrada');
 
-                const div = document.createElement('div');
-                div.classList.add('col');
+  dohvatiPrveDvije(`${baseUrl}/apiObnova.php`, 
+                  'prveDvijeObnova', 
+                  'pic/obnova', 
+                  '.galleryButtonContainer');
+});
 
-                const img = document.createElement('img');
-                img.classList.add('gallery-item');
-                img.loading = 'lazy';
-                img.src = `https://www.thedesign.hr/dokumentacija/pic/izrada/${imageName}`;
-                img.alt = imageName;
+async function dohvatiSlike(apiUrl, containerId, picFolder) {
+  try {
+    const res = await fetch(apiUrl);
+    const images = await res.json();
+    const container = document.getElementById(containerId);
 
-                div.appendChild(img);
-                container.appendChild(div);
-            });
-
-        })
-        .catch(error => console.error('Došlo je do pogreške prilikom učitavanja slika:', error));
-}
-
-async function dohvatiSlikeObnova() {
-    fetch('https://thedesign.hr/apiObnova.php')
-        .then(response => response.json())
-        .then(images => {
-            const container = document.getElementById('obnovaGalleryConteiner');
-            images.forEach(imageName => {
-
-                const div = document.createElement('div');
-                div.classList.add('col');
-
-                const img = document.createElement('img');
-                img.classList.add('gallery-item');
-                img.loading = 'lazy';
-                img.src = `https://www.thedesign.hr/dokumentacija/pic/obnova/${imageName}`;
-                img.alt = imageName;
-
-                div.appendChild(img);
-                container.insertBefore(div, buttonDiv);
-            });
-
-        })
-        .catch(error => console.error('Došlo je do pogreške prilikom učitavanja slika:', error));
+    images.forEach(name => {
+      const col = document.createElement('div');
+      col.classList.add('col');
+      const img = document.createElement('img');
+      img.classList.add('gallery-item');
+      img.loading = 'lazy';
+      img.src = `${window.location.origin}/dokumentacija/${picFolder}/${name}`;
+      img.alt = name;
+      col.appendChild(img);
+      container.appendChild(col);
+    });
+  } catch (e) {
+    console.error(e);
+  }
 }
 
-async function dohvatiSlikePrveDvijeIzrade() {
-    fetch('https://thedesign.hr/apiIzrada.php')
-        .then(response => response.json())
-        .then(images => {
-            const container = document.getElementById('prveDvijeIzrada');
-            const buttonDiv = container.getElementsByClassName("gallery-button");
-            images.slice(0, 2).forEach(imageName => {
-                const div = document.createElement('div');
-                div.classList.add('col');
+async function dohvatiPrveDvije(apiUrl, containerId, picFolder, buttonSelector = null) {
+  try {
+    const res = await fetch(apiUrl);
+    const images = await res.json();
+    const container = document.getElementById(containerId);
 
-                const img = document.createElement('img');
-                img.classList.add('gallery-item');
-                img.loading = 'lazy';
-                img.src = `https://www.thedesign.hr/dokumentacija/pic/izrada/${imageName}`;
-                img.alt = imageName;
+    let buttonDiv = null;
+    if (buttonSelector) {
+      buttonDiv = container.querySelector(buttonSelector);
+    }
 
-                div.appendChild(img);
-                container.insertBefore(div, buttonDiv);
-            });
+    images.slice(0, 2).forEach(name => {
+      const col = document.createElement('div');
+      col.classList.add('col');
+      const img = document.createElement('img');
+      img.classList.add('gallery-item');
+      img.loading = 'lazy';
+      img.src = `${window.location.origin}/dokumentacija/${picFolder}/${name}`;
+      img.alt = name;
+      col.appendChild(img);
 
-        })
-        .catch(error => console.error('Došlo je do pogreške prilikom učitavanja slika:', error));
-}
-
-async function dohvatiSlikePrveDvijeObnova() {
-    fetch('https://thedesign.hr/apiIzrada.php')
-        .then(response => response.json())
-        .then(images => {
-            const buttonDiv = container.getElementsByClassName("gallery-button");
-            const container = document.getElementById('prveDvijeObnova');
-            images.slice(0, 2).forEach(imageName => {
-                const div = document.createElement('div');
-                div.classList.add('col');
-
-                const img = document.createElement('img');
-                img.classList.add('gallery-item');
-                img.loading = 'lazy';
-                img.src = `https://www.thedesign.hr/dokumentacija/pic/izrada/${imageName}`;
-                img.alt = imageName;
-
-                div.appendChild(img);
-                container.prepend(div);
-            });
-
-        })
-        .catch(error => console.error('Došlo je do pogreške prilikom učitavanja slika:', error));
+      if (buttonDiv) {
+        container.insertBefore(col, buttonDiv);
+      } else {
+        container.prepend(col);
+      }
+    });
+  } catch (e) {
+    console.error(e);
+  }
 }
