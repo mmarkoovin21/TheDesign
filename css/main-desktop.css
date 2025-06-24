@@ -138,6 +138,7 @@ img {
 .nav-item {
     display: flex;
     margin: auto 0;
+    justify-content: right;
 }
 
 .nav-link {
