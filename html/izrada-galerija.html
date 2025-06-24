@@ -109,11 +109,12 @@
           <div id="postupak-narucivanja"></div>
         </section>
         <!-- Modal -->
-        <div class="modal-layer position-fixed justify-content-center align-items-center">
-          <div class="slide-img d-flex align-items-center justify-content-between px-4 position-relative">
-            <i id="closeBtn" class="far fa-times-circle fa-2x position-absolute end-0 top-0 m-4"></i>
-            <i id="prev" class="fas fa-chevron-left fa-2x"></i>
-            <i id="next" class="fas fa-chevron-right fa-2x"></i>
+        <div class="modal-layer" id="galleryModal">
+          <div class="slide-img">
+            <button id="closeBtn" class="modal-btn"><i class="far fa-times-circle"></i></button>
+            <button id="prev"     class="modal-btn"><i class="fas fa-arrow-left"></i></button>
+            <img    id="modalImage" src="" alt="velika slika">
+            <button id="next"     class="modal-btn"><i class="fas fa-arrow-right"></i></button>
           </div>
         </div>
         <div id="kontaktirajte-nas"></div>

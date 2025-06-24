@@ -1,22 +1,23 @@
 document.addEventListener("DOMContentLoaded", function () {
   const baseUrl = window.location.origin;
 
-  dohvatiSlike(`${baseUrl}/apiIzrada.php`, 
-               'izradaGalleryConteiner', 
-               'pic/izrada').then(initGalleryModal);
+    dohvatiSlike(`${baseUrl}/apiIzrada.php`, 
+                'izradaGalleryConteiner', 
+                'pic/izrada')
 
-  dohvatiSlike(`${baseUrl}/apiObnova.php`, 
-               'obnovaGalleryConteiner', 
-               'pic/obnova').then(initGalleryModal);;
+    dohvatiSlike(`${baseUrl}/apiObnova.php`, 
+                'obnovaGalleryConteiner', 
+                'pic/obnova');
 
-  dohvatiPrveDvije(`${baseUrl}/apiIzrada.php`, 
-                  'prveDvijeIzrada', 
-                  'pic/izrada').then(initGalleryModal);;
+    dohvatiPrveDvije(`${baseUrl}/apiIzrada.php`, 
+                    'prveDvijeIzrada', 
+                    'pic/izrada');
 
-  dohvatiPrveDvije(`${baseUrl}/apiObnova.php`, 
-                  'prveDvijeObnova', 
-                  'pic/obnova', 
-                  '.galleryButtonContainer').then(initGalleryModal);;
+    dohvatiPrveDvije(`${baseUrl}/apiObnova.php`, 
+                    'prveDvijeObnova', 
+                    'pic/obnova', 
+                    '.galleryButtonContainer');
+    initGalleryModal();
 });
 
 async function dohvatiSlike(apiUrl, containerId, picFolder) {
@@ -74,45 +75,50 @@ async function dohvatiPrveDvije(apiUrl, containerId, picFolder, buttonSelector =
 }
 
 function initGalleryModal() {
-    const items = document.querySelectorAll('.gallery-item');
-    const itemsArr = Array.from(items);
+    const modal      = document.getElementById('galleryModal');
+    const modalImage = document.getElementById('modalImage');
+    const closeBtn   = document.getElementById('closeBtn');
+    const prevBtn    = document.getElementById('prev');
+    const nextBtn    = document.getElementById('next');
   
-    const popSlider = document.querySelector('.modal-layer');
-    const bgSlide   = popSlider.querySelector('.slide-img');
-    const closeBtn  = popSlider.querySelector('#closeBtn');
-    const nextBtn   = popSlider.querySelector('#next');
-    const prevBtn   = popSlider.querySelector('#prev');
+    let itemsArr = [];
+    let currentIndex = 0;
   
-    let activeIndex = 0;
-  
+    const refreshItems = () => {
+      itemsArr = Array.from(document.querySelectorAll('.gallery-item'));
+    };
+    refreshItems();
     document.body.addEventListener('click', e => {
-      if (e.target.matches('.gallery-item')) {
-        activeIndex = itemsArr.indexOf(e.target);
-        bgSlide.style.backgroundImage = `url(${e.target.src})`;
-        popSlider.style.display = 'flex';
+      if (e.target.classList.contains('gallery-item')) {
+        refreshItems();
+        currentIndex = itemsArr.indexOf(e.target);
+        modalImage.src = e.target.src;
+        modal.classList.add('active');
       }
     });
   
-    closeBtn.addEventListener('click', () => popSlider.style.display = 'none');
-    popSlider.addEventListener('click', e => {
-      if (e.target === popSlider) popSlider.style.display = 'none';
-    });
-  
-    nextBtn.addEventListener('click', () => {
-      activeIndex = (activeIndex + 1) % itemsArr.length;
-      bgSlide.style.backgroundImage = `url(${itemsArr[activeIndex].src})`;
+    closeBtn.addEventListener('click', () => {
+      modal.classList.remove('active');
     });
   
     prevBtn.addEventListener('click', () => {
-      activeIndex = (activeIndex - 1 + itemsArr.length) % itemsArr.length;
-      bgSlide.style.backgroundImage = `url(${itemsArr[activeIndex].src})`;
+      currentIndex = (currentIndex - 1 + itemsArr.length) % itemsArr.length;
+      modalImage.src = itemsArr[currentIndex].src;
+    });
+  
+    nextBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % itemsArr.length;
+      modalImage.src = itemsArr[currentIndex].src;
     });
   
     document.addEventListener('keydown', e => {
-      if (popSlider.style.display === 'flex') {
-        if (e.key === 'Escape') popSlider.style.display = 'none';
-        if (e.key === 'ArrowRight') nextBtn.click();
-        if (e.key === 'ArrowLeft')  prevBtn.click();
-      }
+      if (!modal.classList.contains('active')) return;
+      if (e.key === 'Escape')        modal.classList.remove('active');
+      if (e.key === 'ArrowLeft')     prevBtn.click();
+      if (e.key === 'ArrowRight')    nextBtn.click();
+    });
+  
+    modal.addEventListener('click', e => {
+      if (e.target === modal) modal.classList.remove('active');
     });
   }

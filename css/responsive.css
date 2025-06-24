@@ -1,80 +1,118 @@
 @media only screen and (max-width: 600px) {
-    h1, h2, h3, h4, h5, h6{
-        font-weight: 600;   
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-weight: 600;
     }
+
     /******************************CLASSES*******************************/
-    .container-fluid{
+    .container-fluid {
         padding: 5% 6%;
     }
-    .prica-pocetak{
+
+    .prica-pocetak {
         font-size: 5rem;
         margin: 0 auto;
     }
-    .lijevo{
+
+    .lijevo {
         text-align: left;
         margin-top: 3rem;
     }
-    .naslov-pocetak{
+
+    .naslov-pocetak {
         letter-spacing: 2px;
         font-size: 3rem;
     }
+
     .partners-container img {
         height: 2rem;
     }
+
     /*******************************ID-S*********************************/
-    #closeBtn, #prev, #next{
+    #closeBtn,
+    #prev,
+    #next {
         background-color: rgba(0, 0, 0, 0.3);
 
     }
-    #podaci{
+
+    #podaci {
         width: 99%;
     }
-    #footer img{
+
+    #footer img {
         width: 60%;
         margin: 3rem auto 1rem;
     }
-    #O-nama img{
+
+    #O-nama img {
         width: 70%;
         margin: 2rem auto 0.5rem;
     }
-    #title .container-fluid{
+
+    #title .container-fluid {
         margin-top: 3rem;
     }
+
     /***************************CONTACT*FORM*****************************/
-    .form{
+    .form {
         width: 80%;
     }
-    .contact-form input, .contact-form textarea{
+
+    .contact-form input,
+    .contact-form textarea {
         width: 100%;
     }
-    #upute-forma{
+
+    #upute-forma {
         width: 100%;
     }
+
     #upute-forma li {
         width: 100%;
     }
-  .contact-form input[type="checkbox"] {
-    display: inline-block;
-    width: 1rem;
-    bottom: 1.3rem;
-    left: 1rem;
-  }
-  #suglasnost + label{
-    width: 90%;
-  }
-  /***************************POPUP*MODAL*****************************/
-  section i{
-    padding: 5px;
-    z-index: 10;
-  }
-    #prev{
+
+    .contact-form input[type="checkbox"] {
+        display: inline-block;
+        width: 1rem;
+        bottom: 1.3rem;
+        left: 1rem;
+    }
+
+    #suglasnost+label {
+        width: 90%;
+    }
+
+    /***************************POPUP*MODAL*****************************/
+    section i {
+        padding: 5px;
+        z-index: 10;
+    }
+
+    #prev {
         padding: 3rem 1rem;
     }
-    #next{
+
+    #next {
         padding: 3rem 1rem;
     }
-    section .modal-layer .slide-img{
+
+    section .modal-layer .slide-img {
         background-size: 100%;
         width: 99%;
+    }
+
+    #modalImage {
+        width: 100%;
+    }
+
+    .slide-img img {
+        max-width: 100%;
+        max-height: 100%;
     }
 }
