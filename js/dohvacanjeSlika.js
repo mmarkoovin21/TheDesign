@@ -17,8 +17,31 @@ document.addEventListener("DOMContentLoaded", function () {
                     'prveDvijeObnova', 
                     'pic/obnova', 
                     '.galleryButtonContainer');
-    initGalleryModal();
+                    dohvatiPartnere(`${baseUrl}/apiPartneri.php`, 'partners-slider', 'partners')
+    initGalleryModal();    
 });
+
+async function dohvatiPartnere(apiUrl, containerId, picFolder) {
+  try {
+    const res = await fetch(apiUrl);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const images = await res.json();
+    const container = document.getElementsByClassName(containerId)[0];
+    if (!container) throw new Error(`Element s id="${containerId}" ne postoji`);
+
+    images.forEach(name => {
+      const img = document.createElement('img');
+      img.classList.add('partners-img');
+      img.loading = 'lazy';
+      img.src = `${window.location.origin}/dokumentacija/${picFolder}/${name}`;
+      img.alt = name;
+      container.appendChild(img);
+    });
+  } catch (e) {
+    console.error('Greška pri dohvatu partnera ili prikazu slika:', e);
+  }
+}
+
 
 async function dohvatiSlike(apiUrl, containerId, picFolder) {
   try {
