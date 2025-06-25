@@ -1,24 +1,25 @@
 document.addEventListener("DOMContentLoaded", function () {
   const baseUrl = window.location.origin;
 
-    dohvatiSlike(`${baseUrl}/apiIzrada.php`, 
-                'izradaGalleryConteiner', 
-                'pic/izrada')
+  dohvatiSlike(`${baseUrl}/apiIzrada.php`,
+    'izradaGalleryConteiner',
+    'pic/izrada')
 
-    dohvatiSlike(`${baseUrl}/apiObnova.php`, 
-                'obnovaGalleryConteiner', 
-                'pic/obnova');
+  dohvatiSlike(`${baseUrl}/apiObnova.php`,
+    'obnovaGalleryConteiner',
+    'pic/obnova');
 
-    dohvatiPrveDvije(`${baseUrl}/apiIzrada.php`, 
-                    'prveDvijeIzrada', 
-                    'pic/izrada');
+  dohvatiPrveDvije(`${baseUrl}/apiIzrada.php`,
+    'prveDvijeIzrada',
+    'pic/izrada');
 
-    dohvatiPrveDvije(`${baseUrl}/apiObnova.php`, 
-                    'prveDvijeObnova', 
-                    'pic/obnova', 
-                    '.galleryButtonContainer');
-                    dohvatiPartnere(`${baseUrl}/apiPartneri.php`, 'partners-slider', 'partners')
-    initGalleryModal();    
+  dohvatiPrveDvije(`${baseUrl}/apiObnova.php`,
+    'prveDvijeObnova',
+    'pic/obnova',
+    '.galleryButtonContainer');
+  dohvatiPartnere(`${baseUrl}/apiPartneri.php`, 'partners-slider', 'partners');
+  dohvatiPartnere(`${baseUrl}/apiPartneri.php`, 'partners-slider', 'partners');
+  initGalleryModal();
 });
 
 async function dohvatiPartnere(apiUrl, containerId, picFolder) {
@@ -98,50 +99,50 @@ async function dohvatiPrveDvije(apiUrl, containerId, picFolder, buttonSelector =
 }
 
 function initGalleryModal() {
-    const modal      = document.getElementById('galleryModal');
-    const modalImage = document.getElementById('modalImage');
-    const closeBtn   = document.getElementById('closeBtn');
-    const prevBtn    = document.getElementById('prev');
-    const nextBtn    = document.getElementById('next');
-  
-    let itemsArr = [];
-    let currentIndex = 0;
-  
-    const refreshItems = () => {
-      itemsArr = Array.from(document.querySelectorAll('.gallery-item'));
-    };
-    refreshItems();
-    document.body.addEventListener('click', e => {
-      if (e.target.classList.contains('gallery-item')) {
-        refreshItems();
-        currentIndex = itemsArr.indexOf(e.target);
-        modalImage.src = e.target.src;
-        modal.classList.add('active');
-      }
-    });
-  
-    closeBtn.addEventListener('click', () => {
-      modal.classList.remove('active');
-    });
-  
-    prevBtn.addEventListener('click', () => {
-      currentIndex = (currentIndex - 1 + itemsArr.length) % itemsArr.length;
-      modalImage.src = itemsArr[currentIndex].src;
-    });
-  
-    nextBtn.addEventListener('click', () => {
-      currentIndex = (currentIndex + 1) % itemsArr.length;
-      modalImage.src = itemsArr[currentIndex].src;
-    });
-  
-    document.addEventListener('keydown', e => {
-      if (!modal.classList.contains('active')) return;
-      if (e.key === 'Escape')        modal.classList.remove('active');
-      if (e.key === 'ArrowLeft')     prevBtn.click();
-      if (e.key === 'ArrowRight')    nextBtn.click();
-    });
-  
-    modal.addEventListener('click', e => {
-      if (e.target === modal) modal.classList.remove('active');
-    });
-  }
+  const modal = document.getElementById('galleryModal');
+  const modalImage = document.getElementById('modalImage');
+  const closeBtn = document.getElementById('closeBtn');
+  const prevBtn = document.getElementById('prev');
+  const nextBtn = document.getElementById('next');
+
+  let itemsArr = [];
+  let currentIndex = 0;
+
+  const refreshItems = () => {
+    itemsArr = Array.from(document.querySelectorAll('.gallery-item'));
+  };
+  refreshItems();
+  document.body.addEventListener('click', e => {
+    if (e.target.classList.contains('gallery-item')) {
+      refreshItems();
+      currentIndex = itemsArr.indexOf(e.target);
+      modalImage.src = e.target.src;
+      modal.classList.add('active');
+    }
+  });
+
+  closeBtn.addEventListener('click', () => {
+    modal.classList.remove('active');
+  });
+
+  prevBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + itemsArr.length) % itemsArr.length;
+    modalImage.src = itemsArr[currentIndex].src;
+  });
+
+  nextBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % itemsArr.length;
+    modalImage.src = itemsArr[currentIndex].src;
+  });
+
+  document.addEventListener('keydown', e => {
+    if (!modal.classList.contains('active')) return;
+    if (e.key === 'Escape') modal.classList.remove('active');
+    if (e.key === 'ArrowLeft') prevBtn.click();
+    if (e.key === 'ArrowRight') nextBtn.click();
+  });
+
+  modal.addEventListener('click', e => {
+    if (e.target === modal) modal.classList.remove('active');
+  });
+}
