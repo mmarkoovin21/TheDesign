@@ -3,7 +3,7 @@ $dir = __DIR__ . '/dokumentacija/pic/obnova';
 $files = array_diff(scandir($dir), array('..', '.'));
 $images = [];
 foreach ($files as $file) {
-    if (preg_match('/\.(jpg|jpeg|png|gif)$/i', $file)) {
+    if (preg_match('/\.(avif|jpg|jpeg|png|gif)$/i', $file)) {
         $images[] = $file;
     }
 }

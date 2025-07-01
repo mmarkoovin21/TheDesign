@@ -106,7 +106,7 @@ img {
     width: 100%;
     color: white;
     border: none;
-    background-image: url("/dokumentacija/pic/Gumb_izrada_dark.jpg");
+    background-image: url("/dokumentacija/pic/Gumb_izrada_dark.webp");
     background-size: cover;
     background-position: center;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
@@ -255,7 +255,7 @@ img {
 }
 
 #Obnova-namjestaja .gallery-button {
-    background-image: url("/dokumentacija/pic/Gumb_obnova_dark.jpg");
+    background-image: url("/dokumentacija/pic/Gumb_obnova_dark.webp");
     background-size: cover;
     background-position: center;
 }
@@ -318,7 +318,7 @@ img {
 }
 
 #title {
-    background-image: url("/dokumentacija/pic/kuhinja-blur-dark.png");
+    background-image: url("/dokumentacija/pic/pozadina_kuhinja.avif");
     background-size: cover;
     background-attachment: fixed;
 }
@@ -464,11 +464,6 @@ img {
 }
 
 /*************************POPUP*MODAL*****************************/
-section i {
-    color: white;
-    padding: 1rem;
-    z-index: 3;
-}
 
 .modal-layer {
     display: none;

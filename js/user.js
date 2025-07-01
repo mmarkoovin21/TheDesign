@@ -27,29 +27,51 @@ document.addEventListener("DOMContentLoaded", function () {
     .then(r => r.text())
     .then(html => {
       document.getElementById('nav-container').innerHTML = html;
+
+      const navbarLinksDiv = document.getElementById("navbarSupportedContent");
+      const navButton = document.querySelector(".navbar-toggler");
+
+      if (navbarLinksDiv && navButton) {
+        navbarLinksDiv.addEventListener('click', () => {
+          navbarLinksDiv.classList.remove("show");
+          navButton.classList.add("collapsed");
+        });
+      }
+
+      document.querySelectorAll('.upit').forEach(button => {
+        button.addEventListener('click', function () {
+          window.location.href = this.getAttribute('data-href');
+        });
+      });
+
+      document.querySelectorAll('.gallery-button').forEach(button => {
+        button.addEventListener('click', function () {
+          window.location.href = this.getAttribute('data-href');
+        });
+      });
     })
     .catch(console.error);
 }
 );
 
 // funkcija za vraćanje navigacije
-var navbarLinksDiv = document.getElementById("navbarSupportedContent");
-var navButton = document.getElementsByClassName("navbar-toggler");
-navbarLinksDiv.addEventListener('click', () => {
-  navbarLinksDiv.classList.remove("show");
-  navButton.classList.add("collapsed");
-});
+/* var navbarLinksDiv = document.getElementById("navbarSupportedContent");
+ var navButton = document.getElementsByClassName("navbar-toggler");
+ navbarLinksDiv.addEventListener('click', () => {
+   navbarLinksDiv.classList.remove("show");
+   navButton.classList.add("collapsed");
+ });
 
-// linkovi gumbi za galeriju
-document.querySelectorAll('.gallery-button').forEach(button => {
-  button.addEventListener('click', function () {
-    window.location.href = this.getAttribute('data-href');
-  });
-});
+ // linkovi gumbi za galeriju
+ document.querySelectorAll('.gallery-button').forEach(button => {  
+   button.addEventListener('click', function () {
+     window.location.href = this.getAttribute('data-href');
+   });
+ });
 
-// linkovi gumbi za kontakt
-document.querySelectorAll('.upit').forEach(button => {
-  button.addEventListener('click', function () {
-    window.location.href = this.getAttribute('data-href');
-  });
-});
+ // linkovi gumbi za kontakt
+ document.querySelectorAll('.upit').forEach(button => {
+   button.addEventListener('click', function () {
+     window.location.href = this.getAttribute('data-href');
+   });
+ });*/
