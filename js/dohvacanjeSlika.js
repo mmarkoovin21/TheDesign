@@ -1,24 +1,24 @@
 document.addEventListener("DOMContentLoaded", function () {
   const baseUrl = window.location.origin;
 
-  dohvatiSlike(`${baseUrl}/apiIzrada.php`,
+  dohvatiSlike(`/apiIzrada.php`,
     'izradaGalleryConteiner',
     'pic/izrada')
 
-  dohvatiSlike(`${baseUrl}/apiObnova.php`,
+  dohvatiSlike(`/apiObnova.php`,
     'obnovaGalleryConteiner',
     'pic/obnova');
 
-  dohvatiPrveDvije(`${baseUrl}/apiIzrada.php`,
+  dohvatiPrveDvije(`/apiIzrada.php`,
     'prveDvijeIzrada',
     'pic/izrada');
 
-  dohvatiPrveDvije(`${baseUrl}/apiObnova.php`,
+  dohvatiPrveDvije(`/apiObnova.php`,
     'prveDvijeObnova',
     'pic/obnova',
     '.galleryButtonContainer');
-  dohvatiPartnere(`${baseUrl}/apiPartneri.php`, 'partners-slider', 'partners');
-  dohvatiPartnere(`${baseUrl}/apiPartneri.php`, 'partners-slider', 'partners');
+  dohvatiPartnere(`/apiPartneri.php`, 'partners-slider', 'partners');
+  dohvatiPartnere(`/apiPartneri.php`, 'partners-slider', 'partners');
   initGalleryModal();
 });
 
@@ -33,7 +33,6 @@ async function dohvatiPartnere(apiUrl, containerId, picFolder) {
     images.forEach(name => {
       const img = document.createElement('img');
       img.classList.add('partners-img');
-      img.loading = 'lazy';
       img.src = `${window.location.origin}/dokumentacija/${picFolder}/${name}`;
       img.alt = name;
       container.appendChild(img);
@@ -55,7 +54,6 @@ async function dohvatiSlike(apiUrl, containerId, picFolder) {
       col.classList.add('col');
       const img = document.createElement('img');
       img.classList.add('gallery-item');
-      img.loading = 'lazy';
       img.src = `${window.location.origin}/dokumentacija/${picFolder}/${name}`;
       img.alt = name;
       col.appendChild(img);
@@ -82,7 +80,6 @@ async function dohvatiPrveDvije(apiUrl, containerId, picFolder, buttonSelector =
       col.classList.add('col');
       const img = document.createElement('img');
       img.classList.add('gallery-item');
-      img.loading = 'lazy';
       img.src = `${window.location.origin}/dokumentacija/${picFolder}/${name}`;
       img.alt = name;
       col.appendChild(img);
