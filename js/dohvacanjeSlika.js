@@ -28,7 +28,7 @@ async function dohvatiPartnere(apiUrl, containerId, picFolder) {
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const images = await res.json();
     const container = document.getElementsByClassName(containerId)[0];
-    if (!container) throw new Error(`Element s id="${containerId}" ne postoji`);
+    if (!container) return;
 
     images.forEach(name => {
       const img = document.createElement('img');
@@ -74,6 +74,7 @@ async function dohvatiPrveDvije(apiUrl, containerId, picFolder, buttonSelector =
     const res = await fetch(apiUrl);
     const images = await res.json();
     const container = document.getElementById(containerId);
+    if (!container) return;
 
     let buttonDiv = null;
     if (buttonSelector) {
