@@ -44,10 +44,14 @@ async function dohvatiPartnere(apiUrl, containerId, picFolder) {
 
 
 async function dohvatiSlike(apiUrl, containerId, picFolder) {
+  const container = document.getElementById(containerId);
+  if (!container) {
+    return;
+  }
+
   try {
     const res = await fetch(apiUrl);
     const images = await res.json();
-    const container = document.getElementById(containerId);
 
     images.forEach(name => {
       const col = document.createElement('div');
@@ -63,6 +67,7 @@ async function dohvatiSlike(apiUrl, containerId, picFolder) {
     console.error(e);
   }
 }
+
 
 async function dohvatiPrveDvije(apiUrl, containerId, picFolder, buttonSelector = null) {
   try {
