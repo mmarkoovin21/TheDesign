@@ -223,6 +223,18 @@ document.addEventListener("DOMContentLoaded", () => {
   dohvatiPartnere(`/apiPartneri.php`, 'partners-slider', 'partners');
   initGalleryModal();
 
+  document.querySelectorAll('.upit').forEach(button => {
+    button.addEventListener('click', function () {
+      window.location.href = this.getAttribute('data-href');
+    });
+  });
+
+  document.querySelectorAll('.gallery-button').forEach(button => {
+    button.addEventListener('click', function () {
+      window.location.href = this.getAttribute('data-href');
+    });
+  });
+
   // === VALIDACIJA FORME ===
   const imePrezime = document.getElementById("ime");
   const mobitel = document.getElementById("mob");
