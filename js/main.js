@@ -28,31 +28,39 @@ function fadeInTitle() {
   }, 1000);
 }
 
-async function dohvatiSlike(apiUrl, containerId, picFolder) {
+function dohvatiSlike(apiUrl, containerId, picFolder) {
   const container = document.getElementById(containerId);
-  if (!container) {
-    return;
-  }
+  if (!container) return;
 
-  try {
-    const res = await fetch(apiUrl);
-    const images = await res.json();
+  fetch(apiUrl)
+    .then(res => res.json())
+    .then(images => {
+      images.forEach(name => {
+        const baseName = name.replace(/\.(avif|jpg|jpeg|png|webp)$/i, '');
+        const extension = name.split('.').pop();
 
-    images.forEach(name => {
-      const col = document.createElement('div');
-      col.classList.add('col');
-      const img = document.createElement('img');
-      img.classList.add('gallery-item');
-      img.src = `${window.location.origin}/dokumentacija/${picFolder}/${name}`;
-      img.alt = name;
-      col.appendChild(img);
-      container.appendChild(col);
-    });
-  } catch (e) {
-    console.error(e);
-  }
+        const col = document.createElement('div');
+        col.classList.add('col');
+
+        const img = document.createElement('img');
+        img.classList.add('gallery-item');
+
+        img.srcset = `
+          ${window.location.origin}/dokumentacija/${picFolder}/mobile-480/${baseName}-480.${extension} 408w,
+          ${window.location.origin}/dokumentacija/${picFolder}/tablet-720/${baseName}-720.${extension} 720w,
+          ${window.location.origin}/dokumentacija/${picFolder}/${baseName}.${extension} 1080w
+        `.trim();
+
+        img.sizes = `(max-width: 480px) 480px, (max-width: 768px) 720px, 1080px`;
+        img.src = `${window.location.origin}/dokumentacija/${picFolder}/tablet-720/${baseName}-720.${extension}`;
+        img.alt = baseName;
+
+        col.appendChild(img);
+        container.appendChild(col);
+      });
+    })
+    .catch(console.error);
 }
-
 
 async function dohvatiPrveDvije(apiUrl, containerId, picFolder, buttonSelector = null) {
   try {
@@ -67,12 +75,25 @@ async function dohvatiPrveDvije(apiUrl, containerId, picFolder, buttonSelector =
     }
 
     images.slice(0, 2).forEach(name => {
+      const baseName = name.replace(/\.(avif|jpg|jpeg|png|webp)$/i, '');
+      const extension = name.split('.').pop();
+
       const col = document.createElement('div');
       col.classList.add('col');
+
       const img = document.createElement('img');
       img.classList.add('gallery-item');
-      img.src = `${window.location.origin}/dokumentacija/${picFolder}/${name}`;
-      img.alt = name;
+
+      img.srcset = `
+        ${window.location.origin}/dokumentacija/${picFolder}/mobile-480/${baseName}-480.${extension} 480w,
+        ${window.location.origin}/dokumentacija/${picFolder}/tablet-720/${baseName}-720.${extension} 720w,
+        ${window.location.origin}/dokumentacija/${picFolder}/${baseName}.${extension} 1080w
+      `.trim();
+
+      img.sizes = `(max-width: 480px) 480px, (max-width: 768px) 720px, 1080px`;
+      img.src = `${window.location.origin}/dokumentacija/${picFolder}/tablet-720/${baseName}-720.${extension}`;
+      img.alt = baseName;
+
       col.appendChild(img);
 
       if (buttonDiv) {
