@@ -27,11 +27,12 @@ if (isset($_POST['poruka'])) {
 }
 
 header("Content-Type: application/json");
+$subject = '=?UTF-8?B?' . base64_encode('Upit - ' . $imePrezime) . '?=';
 
 if($imePrezime != "" && $mobitel != "" && $email != "" && $wrappedPoruka != ""){
     mail("info@thedesign.hr",
         // naslov
-        'Upit - ' . $imePrezime,
+        $subject,
 
         //opis
         $wrappedPoruka . "\r\n<br><br>" .
