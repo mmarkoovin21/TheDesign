@@ -134,6 +134,18 @@ img {
     transition: all 0.3s ease;
 }
 
+@media (max-width: 768px) {
+  .gallery-button {
+    background-image: url("/dokumentacija/pic/Gumb_izrada_dark-720.webp");
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-button {
+    background-image: url("/dokumentacija/pic/Gumb_izrada_dark-480.webp");
+  }
+}
+
 .gallery-button:hover {
     background-color: rgba(128, 128, 128, 0.4);
     font-size: xx-large;
@@ -277,6 +289,18 @@ img {
     background-position: center;
 }
 
+@media (max-width: 768px) {
+  #Obnova-namjestaja .gallery-button {
+    background-image: url("/dokumentacija/pic/Gumb_obnova_dark-720.webp");
+  }
+}
+
+@media (max-width: 480px) {
+  #Obnova-namjestaja .gallery-button {
+    background-image: url("/dokumentacija/pic/Gumb_obnova_dark-480.webp");
+  }
+}
+
 #O-nama img {
     margin-top: 0;
     width: 20%;
@@ -337,7 +361,20 @@ img {
 #title {
     background-image: url("/dokumentacija/pic/pozadina_kuhinja.avif");
     background-size: cover;
+    background-position: center;
     background-attachment: fixed;
+}
+
+@media (max-width: 768px) {
+  #title {
+    background-image: url("/dokumentacija/pic/pozadina_kuhinja-720.avif");
+  }
+}
+
+@media (max-width: 480px) {
+  #title {
+    background-image: url("/dokumentacija/pic/pozadina_kuhinja-480.avif");
+  }
 }
 
 #Izrada-namjestaja .prica {
