@@ -1,17 +1,17 @@
 @font-face {
-  font-family: 'Font Awesome 5 Free';
-  src: url('/fonts/fa-solid-900.woff2') format('woff2');
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
+    font-family: 'Font Awesome 5 Free';
+    src: url('/fonts/fa-solid-900.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-  font-family: 'Font Awesome 5 Free';
-  src: url('/fonts/fa-solid-400.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
+    font-family: 'Font Awesome 5 Free';
+    src: url('/fonts/fa-solid-400.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
 }
 
 
@@ -135,15 +135,15 @@ img {
 }
 
 @media (max-width: 768px) {
-  .gallery-button {
-    background-image: url("/dokumentacija/pic/Gumb_izrada_dark-720.webp");
-  }
+    .gallery-button {
+        background-image: url("/dokumentacija/pic/Gumb_izrada_dark-720.webp");
+    }
 }
 
 @media (max-width: 480px) {
-  .gallery-button {
-    background-image: url("/dokumentacija/pic/Gumb_izrada_dark-480.webp");
-  }
+    .gallery-button {
+        background-image: url("/dokumentacija/pic/Gumb_izrada_dark-480.webp");
+    }
 }
 
 .gallery-button:hover {
@@ -290,15 +290,15 @@ img {
 }
 
 @media (max-width: 768px) {
-  #Obnova-namjestaja .gallery-button {
-    background-image: url("/dokumentacija/pic/Gumb_obnova_dark-720.webp");
-  }
+    #Obnova-namjestaja .gallery-button {
+        background-image: url("/dokumentacija/pic/Gumb_obnova_dark-720.webp");
+    }
 }
 
 @media (max-width: 480px) {
-  #Obnova-namjestaja .gallery-button {
-    background-image: url("/dokumentacija/pic/Gumb_obnova_dark-480.webp");
-  }
+    #Obnova-namjestaja .gallery-button {
+        background-image: url("/dokumentacija/pic/Gumb_obnova_dark-480.webp");
+    }
 }
 
 #O-nama img {
@@ -360,25 +360,21 @@ img {
 
 #title {
     background-image: url("/dokumentacija/pic/pozadina_kuhinja.avif");
-    background-repeat: no-repeat; 
-       background-position: center;
-       background-attachment: fixed;       
-       webkit-background-size: cover;
-       -moz-background-size: cover;
-       -o-background-size: cover;
-       background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: scroll;
 }
 
 @media (max-width: 768px) {
-  #title {
-    background-image: url("/dokumentacija/pic/pozadina_kuhinja-720.avif");
-  }
+    #title {
+        background-image: url("/dokumentacija/pic/pozadina_kuhinja-720.avif");
+    }
 }
 
 @media (max-width: 480px) {
-  #title {
-    background-image: url("/dokumentacija/pic/pozadina_kuhinja-480.avif");
-  }
+    #title {
+        background-image: url("/dokumentacija/pic/pozadina_kuhinja-480.avif");
+    }
 }
 
 #Izrada-namjestaja .prica {
