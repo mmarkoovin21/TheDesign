@@ -360,9 +360,13 @@ img {
 
 #title {
     background-image: url("/dokumentacija/pic/pozadina_kuhinja.avif");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: scroll;
+    background-repeat: no-repeat; 
+       background-position: center;
+       background-attachment: fixed;       
+       webkit-background-size: cover;
+       -moz-background-size: cover;
+       -o-background-size: cover;
+       background-size: cover;     
 }
 
 @media (max-width: 768px) {
