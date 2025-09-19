@@ -29,10 +29,10 @@
 
   <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" as="style"
     onload="this.rel='stylesheet'">
-  <link rel="preload" href="css/main.css" as="style" onload="this.rel='stylesheet'">
+  <link rel="preload" href="css/main-edit.css" as="style" onload="this.rel='stylesheet'">
   <noscript>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main-edit.css">
   </noscript>
 
   <link rel="preload"
@@ -287,8 +287,11 @@
             <label for="odabir-oboje">Oboje</label>
           </div>
           <textarea name="poruka" id="poruka" placeholder="Opis zahtjeva"></textarea>
-          <input type="checkbox" name="suglasnost" id="suglasnost">
-          <label for="suglasnost">Suglasnost za korištenje podataka u svrhu izrade informativne ponude.</label>
+          <label class="checkbox-container">
+            <input type="checkbox">
+            <div class="custom-checkbox"></div>
+            <span class="checkbox-label">Suglasnost za korištenje podataka u svrhu izrade informativne ponude.</span>
+          </label>
           <div id="status"></div>
           <button type="submit">POŠALJI</button>
         </form>
