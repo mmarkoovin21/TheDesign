@@ -630,6 +630,11 @@ img {
     user-select: none;
 }
 
+.checkbox-label a{
+    color: white; 
+    font-size: large;
+}
+
 .checkbox-container input[type="checkbox"] {
     display: none;
 }
