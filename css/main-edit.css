@@ -307,6 +307,14 @@ img {
     height: 20%;
 }
 
+#politika-privatnosti a {
+    font-size: large;
+    margin: 0;
+}
+#politika-privatnosti ul{
+    margin-left: 2rem;
+}
+
 #sivi-tekst {
     margin-top: 2rem;
     background-color: rgba(87, 110, 113, 0.1);
@@ -630,9 +638,10 @@ img {
     user-select: none;
 }
 
-.checkbox-label a{
-    color: white; 
+.checkbox-label a {
+    color: white;
     font-size: large;
+    margin: 0;
 }
 
 .checkbox-container input[type="checkbox"] {
@@ -672,6 +681,7 @@ img {
 .checkbox-container input:checked~.custom-checkbox::after {
     opacity: 1;
 }
+
 /********************MEDIA**********************/
 
 @media only screen and (max-width: 600px) {
