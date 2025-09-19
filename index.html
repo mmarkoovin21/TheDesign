@@ -29,10 +29,10 @@
 
   <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" as="style"
     onload="this.rel='stylesheet'">
-  <link rel="preload" href="css/main-edit.css" as="style" onload="this.rel='stylesheet'">
+  <link rel="preload" href="css/main.css" as="style" onload="this.rel='stylesheet'">
   <noscript>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/main-edit.css">
+    <link rel="stylesheet" href="css/main.css">
   </noscript>
 
   <link rel="preload"
@@ -266,7 +266,7 @@
     <div class="container-fluid">
       <h2 class="naslov">KONTAKTIRAJTE NAS</h2>
       <div class="container contact-form">
-        <form action="#" method="post">
+        <form action="#" method="post" id="contact_form_submit" onsubmit="gtag('event', 'form_submit', {'event_category': 'contact'});">
           <input type="text" id="ime" name="ime" placeholder="Ime i prezime">
           <input type="tel" id="mob" name="mob" placeholder="Broj mobitela">
           <input type="text" id="email" name="email" placeholder="Email adresa">
@@ -288,7 +288,7 @@
           </div>
           <textarea name="poruka" id="poruka" placeholder="Opis zahtjeva"></textarea>
           <label class="checkbox-container">
-            <input type="checkbox">
+            <input type="checkbox" name="suglasnost" id="suglasnost" required>
             <div class="custom-checkbox"></div>
             <span class="checkbox-label">Suglasnost za korištenje podataka u svrhu izrade informativne ponude. <br> Detalje pročitajte u našoj <a href="/html/privatnost.html">Politici privatnosti</a>.</span>
           </label>

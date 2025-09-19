@@ -153,8 +153,8 @@
   <section class="colored-section" id="form">
     <div class="container-fluid">
       <h2 class="naslov">KONTAKTIRAJTE NAS</h2>
-      <div class="container contact-form">
-        <form action="#" method="post">
+      <div class="container contact-form" id="contact_form_submit" onsubmit="gtag('event', 'form_submit', {'event_category': 'contact'});">
+        <form action="#" method="post" id="contact_form_submit" onsubmit="gtag('event', 'form_submit', {'event_category': 'contact'});">
           <input type="text" id="ime" name="ime" placeholder="Ime i prezime">
           <input type="tel" id="mob" name="mob" placeholder="Broj mobitela">
           <input type="text" id="email" name="email" placeholder="Email adresa">
@@ -175,8 +175,11 @@
             <label for="odabir-oboje">Oboje</label>
           </div>
           <textarea name="poruka" id="poruka" placeholder="Opis zahtjeva"></textarea>
-          <input type="checkbox" name="suglasnost" id="suglasnost">
-          <label for="suglasnost">Suglasnost za korištenje podataka u svrhu izrade informativne ponude.</label>
+          <label class="checkbox-container">
+            <input type="checkbox" name="suglasnost" id="suglasnost" required>
+            <div class="custom-checkbox"></div>
+            <span class="checkbox-label">Suglasnost za korištenje podataka u svrhu izrade informativne ponude. <br> Detalje pročitajte u našoj <a href="/html/privatnost.html">Politici privatnosti</a>.</span>
+          </label>
           <div id="status"></div>
           <button type="submit">POŠALJI</button>
         </form>

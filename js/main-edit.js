@@ -172,6 +172,13 @@ function CheckSuglasnost(suglasnost) {
   }
   return true;
 }
+function resetForm() {
+  document.getElementById("ime").value = "";
+  document.getElementById("mob").value = "";
+  document.getElementById("email").value = "";
+  document.getElementById("poruka").value = "";
+  document.getElementById("suglasnost").checked = false;
+}
 
 function initGalleryModal() {
   const modal = document.getElementById('galleryModal');
@@ -262,6 +269,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const email = document.getElementById("email");
   const poruka = document.getElementById("poruka");
   const suglasnost = document.getElementById("suglasnost");
+  console.log(suglasnost);
+  
   const forma = document.getElementById("form");
   const statusSlanja = document.getElementById("status");
 
@@ -307,7 +316,7 @@ document.addEventListener("DOMContentLoaded", () => {
         body: JSON.stringify({ "primatelj-mail": email.value })
       });
 
-      forma.reset();
+      forma.resetForm();
       statusSlanja.innerHTML = "";
     } else {
       while (statusSlanja.firstChild) {

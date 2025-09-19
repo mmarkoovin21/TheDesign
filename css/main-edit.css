@@ -764,10 +764,6 @@ img {
         width: 48px;
     }
 
-    #suglasnost+label {
-        width: 90%;
-    }
-
     section i {
         padding: 5px;
         z-index: 10;
