@@ -367,6 +367,10 @@ img {
     padding: 2% 13%;
 }
 
+#O-nama .container-fluid {
+        margin-top: 5rem;
+    }
+
 #title {
     background-image: url("/dokumentacija/pic/pozadina_kuhinja.avif");
     background-repeat: no-repeat;
@@ -701,6 +705,10 @@ img {
 
     .container-fluid {
         padding: 5% 6%;
+    }
+
+    #O-nama .container-fluid {
+        margin-top: 8rem;
     }
 
     .prica-pocetak {

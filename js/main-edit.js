@@ -187,6 +187,10 @@ function initGalleryModal() {
   const prevBtn = document.getElementById('prev');
   const nextBtn = document.getElementById('next');
 
+  if (!modal || !modalImage || !closeBtn || !prevBtn || !nextBtn) {
+    return;
+  }
+
   let itemsArr = [];
   let currentIndex = 0;
 
@@ -251,23 +255,39 @@ document.addEventListener("DOMContentLoaded", () => {
   dohvatiPartnere(`/apiPartneri.php`, 'partners-slider', 'partners');
   initGalleryModal();
 
-  // Zatvaranje navbar-a na mobilnom prikazu kada se klikne na link
   const navbarToggler = document.querySelector('.navbar-toggler');
   const navbarCollapse = document.querySelector('.navbar-collapse');
   const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
   
   navLinks.forEach(link => {
     link.addEventListener('click', () => {
-      // Provjeri da li je navbar otvoren (ima 'show' klasu) i zatvori ga
       if (navbarCollapse && navbarCollapse.classList.contains('show')) {
         navbarToggler.click();
       }
     });
   });
 
-  document.querySelectorAll('.upit').forEach(button => {
-    button.addEventListener('click', function () {
-      window.location.href = this.getAttribute('data-href');
+  const upitButtons = document.querySelectorAll('.upit');
+  upitButtons.forEach(button => {
+    button.addEventListener('click', function (e) {
+      e.preventDefault();
+      
+      const href = this.getAttribute('data-href');
+      
+      if (href && href.startsWith('#')) {
+        const targetElement = document.querySelector(href);
+        
+        if (targetElement) {
+          targetElement.scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'start'
+          });
+        } else {
+          console.log('Target element nije pronađen');
+        }
+      } else {
+        window.location.href = href;
+      }
     });
   });
 
@@ -285,11 +305,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const suglasnost = document.getElementById("suglasnost");
   console.log(suglasnost);
   
-  const forma = document.getElementById("form");
+  const forma = document.getElementById("contact_form_submit");
   const statusSlanja = document.getElementById("status");
 
-  forma.addEventListener("submit", (e) => {
-    e.preventDefault();
+  if (forma) {
+    forma.addEventListener("submit", (e) => {
+      e.preventDefault();
 
     porukeGresaka = document.createElement("ul");
     resetInputStyles(imePrezime);
@@ -340,4 +361,5 @@ document.addEventListener("DOMContentLoaded", () => {
       statusSlanja.appendChild(porukeGresaka);
     }
   });
+  } // Zatvaranje if (forma) statement
 });
