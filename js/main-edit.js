@@ -251,6 +251,20 @@ document.addEventListener("DOMContentLoaded", () => {
   dohvatiPartnere(`/apiPartneri.php`, 'partners-slider', 'partners');
   initGalleryModal();
 
+  // Zatvaranje navbar-a na mobilnom prikazu kada se klikne na link
+  const navbarToggler = document.querySelector('.navbar-toggler');
+  const navbarCollapse = document.querySelector('.navbar-collapse');
+  const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+  
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      // Provjeri da li je navbar otvoren (ima 'show' klasu) i zatvori ga
+      if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+        navbarToggler.click();
+      }
+    });
+  });
+
   document.querySelectorAll('.upit').forEach(button => {
     button.addEventListener('click', function () {
       window.location.href = this.getAttribute('data-href');
