@@ -74,7 +74,8 @@ img {
 }
 
 #title .container-fluid {
-    padding: 5% 3%;
+    padding: 3%;
+    width: 100%;
 }
 
 .copyright {
@@ -374,6 +375,9 @@ img {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
 }
 
 @media (max-width: 768px) {
@@ -706,7 +710,7 @@ img {
 
     .lijevo {
         text-align: left;
-        margin-top: 6rem;
+        margin-top: rem;
     }
 
     .naslov-pocetak {
